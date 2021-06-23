@@ -1,0 +1,96 @@
+OBX|5000|ST|48013-7^Genomic reference sequence^LN|1a|NC_000001.11|
+OBX|5001|NR|51959-5^Range(s) of DNA sequence examined^LN|1a.a|201038511^201113566|
+OBX|5002|NR|51959-5^Range(s) of DNA sequence examined^LN|1a.b|201358007^201378700|
+OBX|5003|ST|48013-7^Genomic reference sequence^LN|1b|NC_000002.12|
+OBX|5004|NR|51959-5^Range(s) of DNA sequence examined^LN|1b.a|47402066^47484228|
+OBX|5005|ST|48013-7^Genomic reference sequence^LN|1c|NC_000003.12|
+OBX|5006|NR|51959-5^Range(s) of DNA sequence examined^LN|1c.a|36992349^37051846|
+OBX|5007|ST|48013-7^Genomic reference sequence^LN|1d|NC_000005.10|
+OBX|5008|NR|51959-5^Range(s) of DNA sequence examined^LN|1d.a|112706504^112847239|
+OBX|5009|ST|48013-7^Genomic reference sequence^LN|1e|NC_000011.10|
+OBX|5010|NR|51959-5^Range(s) of DNA sequence examined^LN|1e.a|47330405^47353702|
+OBX|5011|NR|51959-5^Range(s) of DNA sequence examined^LN|1e.b|64802513^64812294|
+OBX|5012|ST|48013-7^Genomic reference sequence^LN|1f|NC_000013.11|
+OBX|5013|NR|51959-5^Range(s) of DNA sequence examined^LN|1f.a|32314479^32400672|
+OBX|5014|ST|48013-7^Genomic reference sequence^LN|1g|NC_000014.9|
+OBX|5015|NR|51959-5^Range(s) of DNA sequence examined^LN|1g.a|23411737^23436686|
+OBX|5016|ST|48013-7^Genomic reference sequence^LN|1h|NC_000015.10|
+OBX|5017|NR|51959-5^Range(s) of DNA sequence examined^LN|1h.a|63041638^63072915|
+OBX|5018|ST|48013-7^Genomic reference sequence^LN|1i|NC_000017.11|
+OBX|5019|NR|51959-5^Range(s) of DNA sequence examined^LN|1i.a|43043294^43126483|
+OBX|5020|ST|48013-7^Genomic reference sequence^LN|1j|NC_000019.10|
+OBX|5021|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.a|1204798^1229435|
+OBX|5022|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.b|11088361^11134830|
+OBX|5023|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.c|38432699^38588564|
+OBX|5024|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.d|55150766^55158732|
+OBX|5025|TX|51968-6^Discrete variation analysis overall interpretation^LN|1|Positive|
+OBX|5026|ST|83005-9^Variant Category^LN|2a|Simple|
+OBX|5027|ST|47998-0^Variant Display Name^LN|2a|NC_000005.10:112841058:T:A|
+OBX|5028|CWE|48018-6^Gene Studied^LN|2a|HGNC:583^APC^HGNC|
+OBX|5029|ST|48004-6^DNA Change c.HGVS^LN|2a|NM_001127510.3:c.5465T>A|
+OBX|5030|ST|48005-3^Amino Acid Change p.HGVS^LN|2a|p.Val1822Asp|
+OBX|5031|ST|48013-7^Genomic reference sequence^LN|2a|NC_000005.10|
+OBX|5032|ST|69547-8^Genomic ref allele^LN|2a|T|
+OBX|5033|NR|81254-5^Genomic allele start-end^LN|2a|112841059|
+OBX|5034|ST|69551-0^Genomic alt allele^LN|2a|A|
+OBX|5035|ST|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
+OBX|5036|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|Benign|
+OBX|5037|ST|69548-6^Genetic Variant Assessment^LN|2a|Present|
+OBX|5038|ST|81259-4^Probable Associated Phenotype^LN|2a|Familial multiple polyposis syndrome|
+OBX|5039|CNE|53034-5^Allelic state^LN|2a|LA6705-3^Homozygous^LN|
+OBX|5040|ST|83005-9^Variant Category^LN|2b|Simple|
+OBX|5041|ST|47998-0^Variant Display Name^LN|2b|NC_000011.10:47348489:T:C|
+OBX|5042|CWE|48018-6^Gene Studied^LN|2b|HGNC:7551^MYBPC3^HGNC|
+OBX|5043|ST|48004-6^DNA Change c.HGVS^LN|2b|NM_000256.3:c.706A>G|
+OBX|5044|ST|48005-3^Amino Acid Change p.HGVS^LN|2b|p.Ser236Gly|
+OBX|5045|ST|48013-7^Genomic reference sequence^LN|2b|NC_000011.10|
+OBX|5046|ST|69547-8^Genomic ref allele^LN|2b|T|
+OBX|5047|NR|81254-5^Genomic allele start-end^LN|2b|47348490|
+OBX|5048|ST|69551-0^Genomic alt allele^LN|2b|C|
+OBX|5049|ST|48002-0^Genomic Source Class [Type]^LN|2b|LA6683-2^Germline^LN|
+OBX|5050|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2b|Likely benign|
+OBX|5051|ST|69548-6^Genetic Variant Assessment^LN|2b|Present|
+OBX|5052|ST|81259-4^Probable Associated Phenotype^LN|2b|Familial cardiomyopathy|
+OBX|5053|CNE|53034-5^Allelic state^LN|2b|LA6706-1^Heterozygous^LN|
+OBX|5054|ST|83005-9^Variant Category^LN|2c|Simple|
+OBX|5055|ST|47998-0^Variant Display Name^LN|2c|NC_000011.10:64804545:T:C|
+OBX|5056|CWE|48018-6^Gene Studied^LN|2c|HGNC:7010^MEN1^HGNC|
+OBX|5057|ST|48004-6^DNA Change c.HGVS^LN|2c|NM_130800.2:c.1516A>G|
+OBX|5058|ST|48005-3^Amino Acid Change p.HGVS^LN|2c|p.Thr506Ala|
+OBX|5059|ST|48013-7^Genomic reference sequence^LN|2c|NC_000011.10|
+OBX|5060|ST|69547-8^Genomic ref allele^LN|2c|T|
+OBX|5061|NR|81254-5^Genomic allele start-end^LN|2c|64804546|
+OBX|5062|ST|69551-0^Genomic alt allele^LN|2c|C|
+OBX|5063|ST|48002-0^Genomic Source Class [Type]^LN|2c|LA6683-2^Germline^LN|
+OBX|5064|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2c|Benign|
+OBX|5065|ST|69548-6^Genetic Variant Assessment^LN|2c|Present|
+OBX|5066|ST|81259-4^Probable Associated Phenotype^LN|2c|Multiple endocrine neoplasia, type 1|
+OBX|5067|CNE|53034-5^Allelic state^LN|2c|LA6705-3^Homozygous^LN|
+OBX|5068|ST|83005-9^Variant Category^LN|2d|Simple|
+OBX|5069|ST|47998-0^Variant Display Name^LN|2d|NC_000013.11:32355249:T:C|
+OBX|5070|CWE|48018-6^Gene Studied^LN|2d|HGNC:1101^BRCA2^HGNC|
+OBX|5071|ST|48004-6^DNA Change c.HGVS^LN|2d|NM_000059.4:c.7397T>C|
+OBX|5072|ST|48005-3^Amino Acid Change p.HGVS^LN|2d|p.Val2466Ala|
+OBX|5073|ST|48013-7^Genomic reference sequence^LN|2d|NC_000013.11|
+OBX|5074|ST|69547-8^Genomic ref allele^LN|2d|T|
+OBX|5075|NR|81254-5^Genomic allele start-end^LN|2d|32355250|
+OBX|5076|ST|69551-0^Genomic alt allele^LN|2d|C|
+OBX|5077|ST|48002-0^Genomic Source Class [Type]^LN|2d|LA6683-2^Germline^LN|
+OBX|5078|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2d|Benign|
+OBX|5079|ST|69548-6^Genetic Variant Assessment^LN|2d|Present|
+OBX|5080|ST|81259-4^Probable Associated Phenotype^LN|2d|Hereditary breast and ovarian cancer syndrome|
+OBX|5081|CNE|53034-5^Allelic state^LN|2d|LA6705-3^Homozygous^LN|
+OBX|5082|ST|83005-9^Variant Category^LN|2e|Simple|
+OBX|5083|ST|47998-0^Variant Display Name^LN|2e|NC_000019.10:38499669:C:T|
+OBX|5084|CWE|48018-6^Gene Studied^LN|2e|HGNC:10483^RYR1^HGNC|
+OBX|5085|ST|48004-6^DNA Change c.HGVS^LN|2e|NM_001042723.2:c.7063C>T|
+OBX|5086|ST|48005-3^Amino Acid Change p.HGVS^LN|2e|p.Arg2355Trp|
+OBX|5087|ST|48013-7^Genomic reference sequence^LN|2e|NC_000019.10|
+OBX|5088|ST|69547-8^Genomic ref allele^LN|2e|C|
+OBX|5089|NR|81254-5^Genomic allele start-end^LN|2e|38499670|
+OBX|5090|ST|69551-0^Genomic alt allele^LN|2e|T|
+OBX|5091|ST|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
+OBX|5092|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|Pathogenic|
+OBX|5093|ST|69548-6^Genetic Variant Assessment^LN|2e|Present|
+OBX|5094|ST|81259-4^Probable Associated Phenotype^LN|2e|Malignant hyperthermia|
+OBX|5095|CNE|53034-5^Allelic state^LN|2e|LA6706-1^Heterozygous^LN|

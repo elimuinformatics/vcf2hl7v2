@@ -1,0 +1,6 @@
+chr5	112841059	T	A	NM_001127510.3	c.5465T>A		p.Val1822Asp	Benign	Familial multiple polyposis syndrome
+chr11	47348490	T	C	NM_000256.3	c.706A>G		p.Ser236Gly	Likely benign	Familial cardiomyopathy
+chr11	64804546	T	C	NM_130800.2	c.1516A>G		p.Thr506Ala	Benign	Multiple endocrine neoplasia, type 1
+chr13	32355250	T	C	NM_000059.4	c.7397T>C		p.Val2466Ala	Benign	Hereditary breast and ovarian cancer syndrome
+chr19	38499670	C	T	NM_001042723.2	c.7063C>T		p.Arg2355Trp	Pathogenic	Malignant hyperthermia
+
