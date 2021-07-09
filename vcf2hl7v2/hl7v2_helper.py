@@ -3,16 +3,10 @@ from .common import *
 import pandas as pd
 
 
-GENE_KB = pd.read_csv('vcf2hl7v2/geneKB - Gene table.csv')
+GENE_KB = pd.read_csv(__file__[:-15]+'geneKB_Gene_table.csv')
 
 
-def _create_variant_obx_segment(
-        self,
-        obx_1,
-        obx_2,
-        obx_3,
-        obx_4,
-        obx_5):
+def _create_variant_obx_segment(self, obx_1, obx_2, obx_3, obx_4, obx_5):
     obx = hl7.Segment("OBX")
     obx.obx_1 = obx_1
     obx.obx_2 = obx_2
@@ -44,10 +38,7 @@ def _get_gene_studied(ref_seq, pos, build):
         return str(row)
 
 
-def _get_annotations(
-        record,
-        annotations,
-        spdi_representation):
+def _get_annotations(record, annotations, spdi_representation):
     if isinstance(annotations, str):
         if annotations == 'Not Supplied':
             return [spdi_representation, None, "not specified", None]
@@ -56,47 +47,39 @@ def _get_annotations(
                     (annotations['POS'] == record.POS)
                 ]
     if len(annotation) == 1:
-        if (
-                not annotation['cHGVS'].empty and
-                not annotation['transcriptRefSeq'].empty and
-                not pd.isna(annotation.iloc[0]['cHGVS']) and
-                not pd.isna(annotation.iloc[0]['transcriptRefSeq'])):
+        if(not annotation['cHGVS'].empty and
+           not annotation['transcriptRefSeq'].empty and
+           not pd.isna(annotation.iloc[0]['cHGVS']) and
+           not pd.isna(annotation.iloc[0]['transcriptRefSeq'])):
             dna_change = (f'{annotation.iloc[0]["transcriptRefSeq"]}:' +
                           f'{annotation.iloc[0]["cHGVS"]}')
-        elif (
-                not annotation['cHGVS'].empty and
-                (
-                    annotation['transcriptRefSeq'].empty or
-                    pd.isna(annotation.iloc[0]['transcriptRefSeq'])) and
-                not pd.isna(annotation.iloc[0]['cHGVS'])):
+        elif(not annotation['cHGVS'].empty and
+             (annotation['transcriptRefSeq'].empty or
+             pd.isna(annotation.iloc[0]['transcriptRefSeq'])) and
+             not pd.isna(annotation.iloc[0]['cHGVS'])):
             dna_change = f'{annotation.iloc[0]["cHGVS"]}'
         else:
             dna_change = spdi_representation
-        if (
-                not annotation['pHGVS'].empty and
-                not annotation['proteinRefSeq'].empty and
-                not pd.isna(annotation.iloc[0]['pHGVS']) and
-                not pd.isna(annotation.iloc[0]['proteinRefSeq'])):
+        if(not annotation['pHGVS'].empty and
+           not annotation['proteinRefSeq'].empty and
+           not pd.isna(annotation.iloc[0]['pHGVS']) and
+           not pd.isna(annotation.iloc[0]['proteinRefSeq'])):
             amino_acid_change = (f'{annotation.iloc[0]["proteinRefSeq"]}:' +
                                  f'{annotation.iloc[0]["pHGVS"]}')
-        elif (
-                not annotation['pHGVS'].empty and
-                (
-                    annotation['proteinRefSeq'].empty or
-                    pd.isna(annotation.iloc[0]['proteinRefSeq'])) and
-                not pd.isna(annotation.iloc[0]['pHGVS'])):
+        elif(not annotation['pHGVS'].empty and
+             (annotation['proteinRefSeq'].empty or
+             pd.isna(annotation.iloc[0]['proteinRefSeq'])) and
+             not pd.isna(annotation.iloc[0]['pHGVS'])):
             amino_acid_change = f'{annotation.iloc[0]["pHGVS"]}'
         else:
             amino_acid_change = None
-        if (
-                not annotation['clinSig'].empty and
-                not pd.isna(annotation.iloc[0]['clinSig'])):
+        if(not annotation['clinSig'].empty and
+           not pd.isna(annotation.iloc[0]['clinSig'])):
             clinSig = annotation.iloc[0]['clinSig']
         else:
             clinSig = "not specified"
-        if (
-                not annotation['phenotype'].empty and
-                not pd.isna(annotation.iloc[0]['phenotype'])):
+        if(not annotation['phenotype'].empty and
+           not pd.isna(annotation.iloc[0]['phenotype'])):
             phenotype = annotation.iloc[0]['phenotype']
         else:
             phenotype = None
@@ -115,10 +98,7 @@ class _HL7V2_Helper:
         self.region_studied_index = 1
         self.variant_index = 1
 
-    def add_regionstudied_obv(
-            self,
-            ref_seq,
-            reportable_query_regions):
+    def add_regionstudied_obv(self, ref_seq, reportable_query_regions):
         if reportable_query_regions.empty:
             return
         obx = hl7.Segment("OBX")
@@ -156,13 +136,8 @@ class _HL7V2_Helper:
         self.index += 1
 
     def add_variant_obv(
-            self,
-            record,
-            ref_seq,
-            ratio_ad_dp,
-            source_class,
-            annotations,
-            ref_build):
+            self, record,
+            ref_seq, ratio_ad_dp, source_class, annotations, ref_build):
         alleles = get_allelic_state(record, ratio_ad_dp)
         if alleles["CODE"] == '' and alleles["ALLELE"] == '':
             allelic_state = None
@@ -172,129 +147,81 @@ class _HL7V2_Helper:
         spdi_representation = (f'{ref_seq}:{record.POS - 1}:{record.REF}:' +
                                f'{"".join(list(map(str, list(record.ALT))))}')
         gene_studied = _get_gene_studied(ref_seq, int(record.POS), ref_build)
-        result = _get_annotations(
-                    record,
-                    annotations,
-                    spdi_representation
-                )
+        result = _get_annotations(record, annotations, spdi_representation)
         if result is None:
             return
         dna_change, amino_acid_change, clinSig, phenotype = result
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="83005-9^Variant Category^LN",
-            obx_4=a_index,
-            obx_5="Simple",
+            self, obx_1=str(self.index), obx_2="ST",
+            obx_3="83005-9^Variant Category^LN", obx_4=a_index, obx_5="Simple",
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="47998-0^Variant Display Name^LN",
-            obx_4=a_index,
-            obx_5=spdi_representation,
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="47998-0^Variant Display Name^LN",
+            obx_4=a_index, obx_5=spdi_representation,
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="CWE",
-            obx_3="48018-6^Gene Studied^LN",
-            obx_4=a_index,
-            obx_5=gene_studied,
+            self, obx_1=str(self.index), obx_2="CWE",
+            obx_3="48018-6^Gene Studied^LN", obx_4=a_index, obx_5=gene_studied,
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
+            self, obx_1=str(self.index), obx_2="ST",
             obx_3="48004-6^DNA Change c.HGVS^LN",
-            obx_4=a_index,
-            obx_5=dna_change,
+            obx_4=a_index, obx_5=dna_change,
         )
         if amino_acid_change is not None:
             _create_variant_obx_segment(
-                self,
-                obx_1=str(self.index),
-                obx_2="ST",
-                obx_3="48005-3^Amino Acid Change p.HGVS^LN",
-                obx_4=a_index,
-                obx_5=amino_acid_change,
+                self, obx_1=str(self.index),
+                obx_2="ST", obx_3="48005-3^Amino Acid Change p.HGVS^LN",
+                obx_4=a_index, obx_5=amino_acid_change,
             )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="48013-7^Genomic reference sequence^LN",
-            obx_4=a_index,
-            obx_5=f'{ref_seq}',
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="48013-7^Genomic reference sequence^LN",
+            obx_4=a_index, obx_5=f'{ref_seq}',
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="69547-8^Genomic ref allele^LN",
-            obx_4=a_index,
-            obx_5=str(record.REF),
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="69547-8^Genomic ref allele^LN",
+            obx_4=a_index, obx_5=str(record.REF),
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="NR",
-            obx_3="81254-5^Genomic allele start-end^LN",
-            obx_4=a_index,
-            obx_5=str(record.POS),
+            self, obx_1=str(self.index),
+            obx_2="NR", obx_3="81254-5^Genomic allele start-end^LN",
+            obx_4=a_index, obx_5=str(record.POS),
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="69551-0^Genomic alt allele^LN",
-            obx_4=a_index,
-            obx_5=("".join(list(map(str, list(record.ALT))))),
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="69551-0^Genomic alt allele^LN",
+            obx_4=a_index, obx_5=("".join(list(map(str, list(record.ALT))))),
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="48002-0^Genomic Source Class [Type]^LN",
-            obx_4=a_index,
-            obx_5=source_class,
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="48002-0^Genomic Source Class [Type]^LN",
+            obx_4=a_index, obx_5=source_class,
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3=("53037-8^Genetic Sequence " +
-                   "Variation Clinical Significance^LN"),
-            obx_4=a_index,
-            obx_5=clinSig,
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3=("53037-8^Genetic Sequence " +
+                               "Variation Clinical Significance^LN"),
+            obx_4=a_index, obx_5=clinSig,
         )
         _create_variant_obx_segment(
-            self,
-            obx_1=str(self.index),
-            obx_2="ST",
-            obx_3="69548-6^Genetic Variant Assessment^LN",
-            obx_4=a_index,
-            obx_5="Present",
+            self, obx_1=str(self.index),
+            obx_2="ST", obx_3="69548-6^Genetic Variant Assessment^LN",
+            obx_4=a_index, obx_5="Present",
         )
         if phenotype is not None:
             _create_variant_obx_segment(
-                self,
-                obx_1=str(self.index),
-                obx_2="ST",
-                obx_3="81259-4^Probable Associated Phenotype^LN",
-                obx_4=a_index,
-                obx_5=phenotype,
+                self, obx_1=str(self.index),
+                obx_2="ST", obx_3="81259-4^Probable Associated Phenotype^LN",
+                obx_4=a_index, obx_5=phenotype,
             )
         if allelic_state is not None:
             _create_variant_obx_segment(
-                self,
-                obx_1=str(self.index),
-                obx_2="CNE",
-                obx_3="53034-5^Allelic state^LN",
-                obx_4=a_index,
-                obx_5=allelic_state,
+                self, obx_1=str(self.index),
+                obx_2="CNE", obx_3="53034-5^Allelic state^LN",
+                obx_4=a_index, obx_5=allelic_state,
             )
         self.variant_index += 1
 

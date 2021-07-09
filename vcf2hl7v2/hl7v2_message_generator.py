@@ -37,9 +37,8 @@ def _valid_record(record):
             record,
             record.samples[0].data)
         return False
-    if(
-            len(record.ALT) != 1 or
-            (record.ALT[0].type != 'SNV' and record.ALT[0].type != 'MNV')):
+    if(len(record.ALT) != 1 or
+       (record.ALT[0].type != 'SNV' and record.ALT[0].type != 'MNV')):
         invalid_record_logger.debug(
             ("Reason: ALT is not a simple character string, comma-separated " +
              "character string or '.' (Rows where ALT is a token " +
@@ -47,6 +46,12 @@ def _valid_record(record):
             record,
             record.samples[0].data)
         return False
+    if(not record.REF.isalpha()):
+        invalid_record_logger.debug(
+            ("Reason: REF is not a simple character string, " +
+             "Record: %s, considered sample: %s"),
+            record,
+            record.samples[0].data)
     if record.CHROM == "M" and (
         (len(
             record.samples[0].gt_alleles) == 1 and
@@ -77,34 +82,19 @@ def _fix_regions_chrom(region):
 
 
 def _add_record_variants(
-        record,
-        ref_seq,
-        patientID,
-        hl7v2_helper,
-        ratio_ad_dp,
-        source_class,
-        annotations,
-        ref_build):
+        record, ref_seq, patientID,
+        hl7v2_helper, ratio_ad_dp, source_class, annotations, ref_build):
     if(_valid_record(record)):
         hl7v2_helper.add_variant_obv(
-                        record,
-                        ref_seq,
-                        ratio_ad_dp,
-                        source_class,
-                        annotations,
-                        ref_build
+                        record, ref_seq,
+                        ratio_ad_dp, source_class, annotations, ref_build
                     )
 
 
 def _add_region_studied(
-        region_studied,
-        hl7v2_helper,
-        chrom,
-        ref_seq,
-        patientID):
-    if(
-            region_studied and
-            not region_studied[chrom].empty):
+        region_studied, hl7v2_helper, chrom, ref_seq, patientID):
+    if(region_studied and
+       not region_studied[chrom].empty):
         general_logger.info("Adding region Studied OBX for %s", chrom)
         general_logger.debug("Region Examined %s", region_studied[chrom])
         hl7v2_helper.add_regionstudied_obv(
@@ -113,16 +103,8 @@ def _add_region_studied(
 
 def create_region_studied_obxs(
         vcf_reader,
-        ref_build,
-        patientID,
-        has_tabix,
-        conversion_region,
-        region_studied,
-        ratio_ad_dp,
-        source_class,
-        annotations,
-        output_filename,
-        hl7v2_helper):
+        ref_build, patientID, has_tabix, conversion_region, region_studied,
+        ratio_ad_dp, source_class, annotations, output_filename, hl7v2_helper):
     _fix_regions_chrom(conversion_region)
     _fix_regions_chrom(region_studied)
     if conversion_region:
@@ -136,16 +118,15 @@ def create_region_studied_obxs(
             chrom = _get_chrom(chrom_index)
             ref_seq = _get_ref_seq_by_chrom(
                 ref_build, extract_chrom_identifier(chrom))
-            _add_region_studied(region_studied,
-                                hl7v2_helper, chrom, ref_seq, patientID)
+            _add_region_studied(
+                region_studied, hl7v2_helper, chrom, ref_seq, patientID)
     else:
         chrom_index = 1
         prev_add_chrom = ""
         for record in vcf_reader:
             record.CHROM = extract_chrom_identifier(record.CHROM)
-            if not (
-                    conversion_region and
-                    conversion_region[record.CHROM].empty):
+            if(not (conversion_region and
+               conversion_region[record.CHROM].empty)):
                 if prev_add_chrom != record.CHROM and (
                         region_studied or nocall_region):
                     chrom = _get_chrom(chrom_index)
@@ -154,10 +135,7 @@ def create_region_studied_obxs(
                             ref_build, chrom)
                         _add_region_studied(
                             region_studied,
-                            hl7v2_helper,
-                            chrom,
-                            current_ref_seq,
-                            patientID)
+                            hl7v2_helper, chrom, current_ref_seq, patientID)
                         prev_add_chrom = chrom
                         chrom_index += 1
                         chrom = _get_chrom(chrom_index)
@@ -165,16 +143,8 @@ def create_region_studied_obxs(
 
 
 def create_variant_obxs(
-        vcf_reader,
-        ref_build,
-        patientID,
-        has_tabix,
-        conversion_region,
-        ratio_ad_dp,
-        source_class,
-        annotations,
-        output_filename,
-        hl7v2_helper):
+        vcf_reader, ref_build, patientID, has_tabix, conversion_region,
+        ratio_ad_dp, source_class, annotations, output_filename, hl7v2_helper):
     _fix_regions_chrom(conversion_region)
     general_logger.info("Start adding the Variant OBXs")
     if has_tabix:
@@ -196,13 +166,8 @@ def create_variant_obxs(
                                 record.CHROM)
                             _add_record_variants(
                                 record,
-                                ref_seq,
-                                patientID,
-                                hl7v2_helper,
-                                ratio_ad_dp,
-                                source_class,
-                                annotations,
-                                ref_build
+                                ref_seq, patientID, hl7v2_helper, ratio_ad_dp,
+                                source_class, annotations, ref_build
                             )
             elif not conversion_region:
                 vcf_iterator = None
@@ -215,79 +180,42 @@ def create_variant_obxs(
                         record.CHROM = extract_chrom_identifier(
                             record.CHROM)
                         _add_record_variants(
-                            record,
-                            ref_seq,
-                            patientID,
-                            hl7v2_helper,
-                            ratio_ad_dp,
-                            source_class,
-                            annotations,
-                            ref_build
+                            record, ref_seq, patientID, hl7v2_helper,
+                            ratio_ad_dp, source_class, annotations, ref_build
                         )
     else:
         for record in vcf_reader:
             record.CHROM = extract_chrom_identifier(record.CHROM)
-            if not (
-                    conversion_region and
-                    conversion_region[record.CHROM].empty):
+            if(not (conversion_region and
+               conversion_region[record.CHROM].empty)):
                 ref_seq = _get_ref_seq_by_chrom(ref_build, record.CHROM)
-                if (
-                        not conversion_region or
-                        conversion_region[
-                            record.CHROM,
-                            record.POS - 1: record.POS
-                        ].empty is False):
+                end = record.POS + len(record.REF) - 1
+                if(not conversion_region or
+                   conversion_region[
+                        record.CHROM, record.POS - 1: end
+                   ].empty is False):
                     _add_record_variants(
-                        record,
-                        ref_seq,
-                        patientID,
-                        hl7v2_helper,
-                        ratio_ad_dp,
-                        source_class,
-                        annotations,
-                        ref_build
+                        record, ref_seq, patientID, hl7v2_helper,
+                        ratio_ad_dp, source_class, annotations, ref_build
                     )
 
 
 def _get_hl7v2_message(
         vcf_reader,
-        ref_build,
-        patientID,
-        has_tabix,
-        conversion_region,
-        region_studied,
-        ratio_ad_dp,
-        source_class,
-        annotations,
-        seed,
-        output_filename):
+        ref_build, patientID, has_tabix, conversion_region, region_studied,
+        ratio_ad_dp, source_class, annotations, seed, output_filename):
     hl7v2_helper = _HL7V2_Helper(patientID, seed)
     general_logger.debug("Finished Initializing empty HL7V2 message")
     create_region_studied_obxs(
         vcf_reader,
-        ref_build,
-        patientID,
-        has_tabix,
-        conversion_region,
-        region_studied,
-        ratio_ad_dp,
-        source_class,
-        annotations,
-        output_filename,
-        hl7v2_helper
+        ref_build, patientID, has_tabix, conversion_region, region_studied,
+        ratio_ad_dp, source_class, annotations, output_filename, hl7v2_helper
     )
     if annotations is not None:
         create_variant_obxs(
-            vcf_reader,
-            ref_build,
-            patientID,
-            has_tabix,
-            conversion_region,
-            ratio_ad_dp,
-            source_class,
-            annotations,
-            output_filename,
-            hl7v2_helper
+            vcf_reader, ref_build, patientID,
+            has_tabix, conversion_region, ratio_ad_dp, source_class,
+            annotations, output_filename, hl7v2_helper
         )
     if (hl7v2_helper.index + seed - hl7v2_helper.final_rs_index) > 1:
         hl7v2_helper.message.obx[hl7v2_helper.final_rs_index].obx_5 =\
