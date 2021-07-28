@@ -99,7 +99,7 @@ class Converter(object):
                 'You must provide build number ("GRCh37" or "GRCh38")')
         self.vcf_filename = vcf_filename
         try:
-            self._vcf_reader = list(vcf.Reader(filename=vcf_filename))
+            self._vcf_reader = vcf.Reader(filename=vcf_filename)
         except FileNotFoundError:
             raise
         except BaseException:
@@ -197,9 +197,10 @@ class Converter(object):
         """
         general_logger.info("Starting VCF to HL7V2 Conversion")
         _get_hl7v2_message(
-            self._vcf_reader, self.ref_build, self.patient_id, self.has_tabix,
-            self.conversion_region, self.region_studied, self.ratio_ad_dp,
-            self.source_class, self.annotations, self.seed, output_filename)
+            list(self._vcf_reader), self._vcf_reader, self.ref_build,
+            self.patient_id, self.has_tabix, self.conversion_region,
+            self.source_class, self.region_studied, self.ratio_ad_dp,
+            self.annotations, self.seed, output_filename)
         general_logger.info("Completed VCF to HL7V2 Conversion")
 
     def _generate_exception(self, msg):

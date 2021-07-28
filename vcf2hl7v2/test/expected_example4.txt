@@ -1,0 +1,123 @@
+OBX|1000|ST|48013-7^Genomic reference sequence^LN|1a|NC_000001.11|
+OBX|1001|NR|51959-5^Range(s) of DNA sequence examined^LN|1a.a|1^249250621|
+OBX|1002|ST|48013-7^Genomic reference sequence^LN|1b|NC_000002.12|
+OBX|1003|NR|51959-5^Range(s) of DNA sequence examined^LN|1b.a|1^243199373|
+OBX|1004|ST|48013-7^Genomic reference sequence^LN|1c|NC_000003.12|
+OBX|1005|NR|51959-5^Range(s) of DNA sequence examined^LN|1c.a|1^198022430|
+OBX|1006|ST|48013-7^Genomic reference sequence^LN|1d|NC_000004.12|
+OBX|1007|NR|51959-5^Range(s) of DNA sequence examined^LN|1d.a|1^191154276|
+OBX|1008|ST|48013-7^Genomic reference sequence^LN|1e|NC_000005.10|
+OBX|1009|NR|51959-5^Range(s) of DNA sequence examined^LN|1e.a|1^180915260|
+OBX|1010|ST|48013-7^Genomic reference sequence^LN|1f|NC_000006.12|
+OBX|1011|NR|51959-5^Range(s) of DNA sequence examined^LN|1f.a|1^171115067|
+OBX|1012|ST|48013-7^Genomic reference sequence^LN|1g|NC_000007.14|
+OBX|1013|NR|51959-5^Range(s) of DNA sequence examined^LN|1g.a|1^159138663|
+OBX|1014|ST|48013-7^Genomic reference sequence^LN|1h|NC_000008.11|
+OBX|1015|NR|51959-5^Range(s) of DNA sequence examined^LN|1h.a|1^146364022|
+OBX|1016|ST|48013-7^Genomic reference sequence^LN|1i|NC_000009.12|
+OBX|1017|NR|51959-5^Range(s) of DNA sequence examined^LN|1i.a|1^141213431|
+OBX|1018|ST|48013-7^Genomic reference sequence^LN|1j|NC_000010.11|
+OBX|1019|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.a|1^135534747|
+OBX|1020|ST|48013-7^Genomic reference sequence^LN|1k|NC_000011.10|
+OBX|1021|NR|51959-5^Range(s) of DNA sequence examined^LN|1k.a|1^135006516|
+OBX|1022|ST|48013-7^Genomic reference sequence^LN|1l|NC_000012.12|
+OBX|1023|NR|51959-5^Range(s) of DNA sequence examined^LN|1l.a|1^133851895|
+OBX|1024|ST|48013-7^Genomic reference sequence^LN|1m|NC_000013.11|
+OBX|1025|NR|51959-5^Range(s) of DNA sequence examined^LN|1m.a|1^115169878|
+OBX|1026|ST|48013-7^Genomic reference sequence^LN|1n|NC_000014.9|
+OBX|1027|NR|51959-5^Range(s) of DNA sequence examined^LN|1n.a|1^107349540|
+OBX|1028|ST|48013-7^Genomic reference sequence^LN|1o|NC_000015.10|
+OBX|1029|NR|51959-5^Range(s) of DNA sequence examined^LN|1o.a|1^102531392|
+OBX|1030|ST|48013-7^Genomic reference sequence^LN|1p|NC_000016.10|
+OBX|1031|NR|51959-5^Range(s) of DNA sequence examined^LN|1p.a|1^90354753|
+OBX|1032|ST|48013-7^Genomic reference sequence^LN|1q|NC_000017.11|
+OBX|1033|NR|51959-5^Range(s) of DNA sequence examined^LN|1q.a|1^81195210|
+OBX|1034|ST|48013-7^Genomic reference sequence^LN|1r|NC_000018.10|
+OBX|1035|NR|51959-5^Range(s) of DNA sequence examined^LN|1r.a|1^78077248|
+OBX|1036|ST|48013-7^Genomic reference sequence^LN|1s|NC_000019.10|
+OBX|1037|NR|51959-5^Range(s) of DNA sequence examined^LN|1s.a|1^59128983|
+OBX|1038|ST|48013-7^Genomic reference sequence^LN|1t|NC_000020.11|
+OBX|1039|NR|51959-5^Range(s) of DNA sequence examined^LN|1t.a|1^63025520|
+OBX|1040|ST|48013-7^Genomic reference sequence^LN|1u|NC_000021.9|
+OBX|1041|NR|51959-5^Range(s) of DNA sequence examined^LN|1u.a|1^48129895|
+OBX|1042|ST|48013-7^Genomic reference sequence^LN|1v|NC_000022.11|
+OBX|1043|NR|51959-5^Range(s) of DNA sequence examined^LN|1v.a|1^51304566|
+OBX|1044|ST|48013-7^Genomic reference sequence^LN|1w|NC_000023.11|
+OBX|1045|NR|51959-5^Range(s) of DNA sequence examined^LN|1w.a|1^155270560|
+OBX|1046|ST|48013-7^Genomic reference sequence^LN|1x|NC_000024.10|
+OBX|1047|NR|51959-5^Range(s) of DNA sequence examined^LN|1x.a|1^59373566|
+OBX|1048|ST|48013-7^Genomic reference sequence^LN|1y|NC_012920.1|
+OBX|1049|NR|51959-5^Range(s) of DNA sequence examined^LN|1y.a|1^16569|
+OBX|1050|TX|51968-6^Discrete variation analysis overall interpretation^LN|1|Positive|
+OBX|1051|ST|83005-9^Variant Category^LN|2a|Simple|
+OBX|1052|ST|47998-0^Variant Display Name^LN|2a|NC_000023.11:60465:T:C|
+OBX|1053|CWE|48018-6^Gene Studied^LN|2a|HGNC:0000^NoGene^HGNC|
+OBX|1054|ST|48004-6^DNA Change c.HGVS^LN|2a|NC_000023.11:60465:T:C|
+OBX|1055|ST|48013-7^Genomic reference sequence^LN|2a|NC_000023.11|
+OBX|1056|ST|69547-8^Genomic ref allele^LN|2a|T|
+OBX|1057|NR|81254-5^Genomic allele start-end^LN|2a|60466|
+OBX|1058|ST|69551-0^Genomic alt allele^LN|2a|C|
+OBX|1059|ST|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
+OBX|1060|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|not specified|
+OBX|1061|ST|69548-6^Genetic Variant Assessment^LN|2a|Present|
+OBX|1062|CNE|53034-5^Allelic state^LN|2a|LA6706-1^Heterozygous^LN|
+OBX|1063|ST|83005-9^Variant Category^LN|2b|Simple|
+OBX|1064|ST|47998-0^Variant Display Name^LN|2b|NC_000023.11:60578:G:A|
+OBX|1065|CWE|48018-6^Gene Studied^LN|2b|HGNC:0000^NoGene^HGNC|
+OBX|1066|ST|48004-6^DNA Change c.HGVS^LN|2b|NC_000023.11:60578:G:A|
+OBX|1067|ST|48013-7^Genomic reference sequence^LN|2b|NC_000023.11|
+OBX|1068|ST|69547-8^Genomic ref allele^LN|2b|G|
+OBX|1069|NR|81254-5^Genomic allele start-end^LN|2b|60579|
+OBX|1070|ST|69551-0^Genomic alt allele^LN|2b|A|
+OBX|1071|ST|48002-0^Genomic Source Class [Type]^LN|2b|LA6683-2^Germline^LN|
+OBX|1072|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2b|not specified|
+OBX|1073|ST|69548-6^Genetic Variant Assessment^LN|2b|Present|
+OBX|1074|CNE|53034-5^Allelic state^LN|2b|LA6706-1^Heterozygous^LN|
+OBX|1075|ST|83005-9^Variant Category^LN|2c|Simple|
+OBX|1076|ST|47998-0^Variant Display Name^LN|2c|NC_000023.11:60582:G:C|
+OBX|1077|CWE|48018-6^Gene Studied^LN|2c|HGNC:0000^NoGene^HGNC|
+OBX|1078|ST|48004-6^DNA Change c.HGVS^LN|2c|NC_000023.11:60582:G:C|
+OBX|1079|ST|48013-7^Genomic reference sequence^LN|2c|NC_000023.11|
+OBX|1080|ST|69547-8^Genomic ref allele^LN|2c|G|
+OBX|1081|NR|81254-5^Genomic allele start-end^LN|2c|60583|
+OBX|1082|ST|69551-0^Genomic alt allele^LN|2c|C|
+OBX|1083|ST|48002-0^Genomic Source Class [Type]^LN|2c|LA6683-2^Germline^LN|
+OBX|1084|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2c|not specified|
+OBX|1085|ST|69548-6^Genetic Variant Assessment^LN|2c|Present|
+OBX|1086|CNE|53034-5^Allelic state^LN|2c|LA6706-1^Heterozygous^LN|
+OBX|1087|ST|83005-9^Variant Category^LN|2d|Simple|
+OBX|1088|ST|47998-0^Variant Display Name^LN|2d|NC_000023.11:60592:A:T|
+OBX|1089|CWE|48018-6^Gene Studied^LN|2d|HGNC:0000^NoGene^HGNC|
+OBX|1090|ST|48004-6^DNA Change c.HGVS^LN|2d|NC_000023.11:60592:A:T|
+OBX|1091|ST|48013-7^Genomic reference sequence^LN|2d|NC_000023.11|
+OBX|1092|ST|69547-8^Genomic ref allele^LN|2d|A|
+OBX|1093|NR|81254-5^Genomic allele start-end^LN|2d|60593|
+OBX|1094|ST|69551-0^Genomic alt allele^LN|2d|T|
+OBX|1095|ST|48002-0^Genomic Source Class [Type]^LN|2d|LA6683-2^Germline^LN|
+OBX|1096|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2d|not specified|
+OBX|1097|ST|69548-6^Genetic Variant Assessment^LN|2d|Present|
+OBX|1098|CNE|53034-5^Allelic state^LN|2d|LA6706-1^Heterozygous^LN|
+OBX|1099|ST|83005-9^Variant Category^LN|2e|Simple|
+OBX|1100|ST|47998-0^Variant Display Name^LN|2e|NC_000023.11:60691:T:C|
+OBX|1101|CWE|48018-6^Gene Studied^LN|2e|HGNC:0000^NoGene^HGNC|
+OBX|1102|ST|48004-6^DNA Change c.HGVS^LN|2e|NC_000023.11:60691:T:C|
+OBX|1103|ST|48013-7^Genomic reference sequence^LN|2e|NC_000023.11|
+OBX|1104|ST|69547-8^Genomic ref allele^LN|2e|T|
+OBX|1105|NR|81254-5^Genomic allele start-end^LN|2e|60692|
+OBX|1106|ST|69551-0^Genomic alt allele^LN|2e|C|
+OBX|1107|ST|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
+OBX|1108|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|not specified|
+OBX|1109|ST|69548-6^Genetic Variant Assessment^LN|2e|Present|
+OBX|1110|CNE|53034-5^Allelic state^LN|2e|LA6706-1^Heterozygous^LN|
+OBX|1111|ST|83005-9^Variant Category^LN|2f|Simple|
+OBX|1112|ST|47998-0^Variant Display Name^LN|2f|NC_000023.11:60881:T:G|
+OBX|1113|CWE|48018-6^Gene Studied^LN|2f|HGNC:0000^NoGene^HGNC|
+OBX|1114|ST|48004-6^DNA Change c.HGVS^LN|2f|NC_000023.11:60881:T:G|
+OBX|1115|ST|48013-7^Genomic reference sequence^LN|2f|NC_000023.11|
+OBX|1116|ST|69547-8^Genomic ref allele^LN|2f|T|
+OBX|1117|NR|81254-5^Genomic allele start-end^LN|2f|60882|
+OBX|1118|ST|69551-0^Genomic alt allele^LN|2f|G|
+OBX|1119|ST|48002-0^Genomic Source Class [Type]^LN|2f|LA6683-2^Germline^LN|
+OBX|1120|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2f|not specified|
+OBX|1121|ST|69548-6^Genetic Variant Assessment^LN|2f|Present|
+OBX|1122|CNE|53034-5^Allelic state^LN|2f|LA6706-1^Heterozygous^LN|
