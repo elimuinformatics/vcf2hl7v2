@@ -3,9 +3,6 @@ from .common import *
 import pandas as pd
 
 
-GENE_KB = pd.read_csv(__file__[:-15]+'geneKB_Gene_table.csv')
-
-
 def _create_variant_obx_segment(self, obx_1, obx_2, obx_3, obx_4, obx_5):
     obx = hl7.Segment("OBX")
     obx.obx_1 = obx_1
@@ -17,31 +14,11 @@ def _create_variant_obx_segment(self, obx_1, obx_2, obx_3, obx_4, obx_5):
     self.index += 1
 
 
-def _get_gene_studied(ref_seq, pos, build):
-    if build == 'GRCh37':
-        df = GENE_KB[
-                (GENE_KB['Hg19/build37_refSeq'] == ref_seq) &
-                (GENE_KB['Hg19/build37_start'] <= pos) &
-                (GENE_KB['Hg19/build37_end'] >= pos)
-            ]
-    elif build == 'GRCh38':
-        df = GENE_KB[
-                (GENE_KB['Hg38/build38_refSeq'] == ref_seq) &
-                (GENE_KB['Hg38/build38_start'] <= pos) &
-                (GENE_KB['Hg38/build38_end'] >= pos)
-            ]
-
-    if (len(df['gene']) == 0):
-        return 'HGNC:0000^NoGene^HGNC'
-
-    for row in df['gene']:
-        return str(row)
-
-
 def _get_annotations(record, annotations, spdi_representation):
     if isinstance(annotations, str):
         if annotations == 'Not Supplied':
-            return [spdi_representation, None, "not specified", None]
+            return [spdi_representation, None, "not specified", None,
+                    'HGNC:0000^NoGene^HGNC']
     annotation = annotations[
                     (annotations['CHROM'] == f'chr{record.CHROM}') &
                     (annotations['POS'] == record.POS)
@@ -83,7 +60,13 @@ def _get_annotations(record, annotations, spdi_representation):
             phenotype = annotation.iloc[0]['phenotype']
         else:
             phenotype = None
-        return [dna_change, amino_acid_change, clinSig, phenotype]
+        if(not annotation['gene'].empty and
+           not pd.isna(annotation.iloc[0]['gene'])):
+            gene_studied = annotation.iloc[0]['gene']
+        else:
+            gene_studied = 'HGNC:0000^NoGene^HGNC'
+        return [dna_change, amino_acid_change, clinSig, phenotype,
+                gene_studied]
     else:
         return None
 
@@ -143,14 +126,18 @@ class _HL7V2_Helper:
             allelic_state = None
         else:
             allelic_state = f'{alleles["CODE"]}^{alleles["ALLELE"].title()}^LN'
+        if alleles["FREQUENCY"] is not None:
+            allelic_frequency = alleles["FREQUENCY"]
+        else:
+            allelic_frequency = None
         a_index = f'2{get_alphabet_index(self.variant_index)}'
         spdi_representation = (f'{ref_seq}:{record.POS - 1}:{record.REF}:' +
                                f'{"".join(list(map(str, list(record.ALT))))}')
-        gene_studied = _get_gene_studied(ref_seq, int(record.POS), ref_build)
         result = _get_annotations(record, annotations, spdi_representation)
         if result is None:
             return
-        dna_change, amino_acid_change, clinSig, phenotype = result
+        dna_change, amino_acid_change, clinSig, phenotype, gene_studied =\
+            result
         _create_variant_obx_segment(
             self, obx_1=str(self.index), obx_2="ST",
             obx_3="83005-9^Variant Category^LN", obx_4=a_index, obx_5="Simple",
@@ -214,10 +201,16 @@ class _HL7V2_Helper:
         if phenotype is not None:
             _create_variant_obx_segment(
                 self, obx_1=str(self.index),
-                obx_2="ST", obx_3="81259-4^Probable Associated Phenotype^LN",
+                obx_2="CWE", obx_3="81259-4^Probable Associated Phenotype^LN",
                 obx_4=a_index, obx_5=phenotype,
             )
-        if allelic_state is not None:
+        if allelic_frequency is not None:
+            _create_variant_obx_segment(
+                self, obx_1=str(self.index),
+                obx_2="CNE", obx_3="81258-6^Allelic frequency^LN",
+                obx_4=a_index, obx_5=f'{allelic_frequency}',
+            )
+        if allelic_state is not None and 'Germline' in source_class:
             _create_variant_obx_segment(
                 self, obx_1=str(self.index),
                 obx_2="CNE", obx_3="53034-5^Allelic state^LN",

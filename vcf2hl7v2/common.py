@@ -8,6 +8,7 @@ general_logger = logging.getLogger("vcf2hl7v2.general")
 def get_allelic_state(record, ratio_ad_dp):
     allelic_state = ''
     allelic_code = ''
+    allelic_frequency = None
     # Using  the first sample
     sample = record.samples[0]
     alleles = sample.gt_alleles
@@ -32,8 +33,10 @@ def get_allelic_state(record, ratio_ad_dp):
                    len(sample.data.AD) > 0):
                     ratio = float(
                         sample.data.AD[0]) / float(sample.data.DP)
+                    allelic_frequency = ratio
                 else:
                     ratio = float(sample.data.AD) / float(sample.data.DP)
+                    allelic_frequency = ratio
                 if ratio > ratio_ad_dp:
                     allelic_state = "homoplasmic"
                     allelic_code = "LA6704-6"
@@ -48,7 +51,11 @@ def get_allelic_state(record, ratio_ad_dp):
             _error_log_allelicstate(record)
     else:
         _error_log_allelicstate(record)
-    return {'ALLELE': allelic_state, 'CODE': allelic_code}
+    return {
+                'ALLELE': allelic_state,
+                'CODE': allelic_code,
+                'FREQUENCY': allelic_frequency
+            }
 
 
 def extract_chrom_identifier(chrom):

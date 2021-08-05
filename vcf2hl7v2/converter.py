@@ -112,7 +112,7 @@ class Converter(object):
                 self.annotations = pd.read_csv(
                             self.annotation_filename,
                             names=[
-                                'CHROM', 'POS', 'REF', 'ALT',
+                                'CHROM', 'POS', 'REF', 'ALT', 'gene',
                                 'transcriptRefSeq', 'cHGVS', 'proteinRefSeq',
                                 'pHGVS', 'clinSig', 'phenotype'
                             ],
