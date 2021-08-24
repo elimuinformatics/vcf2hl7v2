@@ -63,4 +63,5 @@ OBX|1061|ST|69551-0^Genomic alt allele^LN|2e|C|
 OBX|1062|ST|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
 OBX|1063|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|not specified|
 OBX|1064|ST|69548-6^Genetic Variant Assessment^LN|2e|Present|
-OBX|1065|CNE|53034-5^Allelic state^LN|2e|LA6703-8^Heteroplasmic^LN|
+OBX|1065|CNE|81258-6^Allelic frequency^LN|2e|0.8|
+OBX|1066|CNE|53034-5^Allelic state^LN|2e|LA6703-8^Heteroplasmic^LN|

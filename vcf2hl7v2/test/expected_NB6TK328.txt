@@ -36,7 +36,7 @@ OBX|5034|ST|69551-0^Genomic alt allele^LN|2a|A|
 OBX|5035|ST|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
 OBX|5036|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|Benign|
 OBX|5037|ST|69548-6^Genetic Variant Assessment^LN|2a|Present|
-OBX|5038|ST|81259-4^Probable Associated Phenotype^LN|2a|Familial multiple polyposis syndrome|
+OBX|5038|CWE|81259-4^Probable Associated Phenotype^LN|2a|72900001^Familial multiple polyposis syndrome^SCT|
 OBX|5039|CNE|53034-5^Allelic state^LN|2a|LA6705-3^Homozygous^LN|
 OBX|5040|ST|83005-9^Variant Category^LN|2b|Simple|
 OBX|5041|ST|47998-0^Variant Display Name^LN|2b|NC_000011.10:47348489:T:C|
@@ -50,7 +50,7 @@ OBX|5048|ST|69551-0^Genomic alt allele^LN|2b|C|
 OBX|5049|ST|48002-0^Genomic Source Class [Type]^LN|2b|LA6683-2^Germline^LN|
 OBX|5050|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2b|Likely benign|
 OBX|5051|ST|69548-6^Genetic Variant Assessment^LN|2b|Present|
-OBX|5052|ST|81259-4^Probable Associated Phenotype^LN|2b|Familial cardiomyopathy|
+OBX|5052|CWE|81259-4^Probable Associated Phenotype^LN|2b|35728003^Familial cardiomyopathy^SCT|
 OBX|5053|CNE|53034-5^Allelic state^LN|2b|LA6706-1^Heterozygous^LN|
 OBX|5054|ST|83005-9^Variant Category^LN|2c|Simple|
 OBX|5055|ST|47998-0^Variant Display Name^LN|2c|NC_000011.10:64804545:T:C|
@@ -64,7 +64,7 @@ OBX|5062|ST|69551-0^Genomic alt allele^LN|2c|C|
 OBX|5063|ST|48002-0^Genomic Source Class [Type]^LN|2c|LA6683-2^Germline^LN|
 OBX|5064|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2c|Benign|
 OBX|5065|ST|69548-6^Genetic Variant Assessment^LN|2c|Present|
-OBX|5066|ST|81259-4^Probable Associated Phenotype^LN|2c|Multiple endocrine neoplasia, type 1|
+OBX|5066|CWE|81259-4^Probable Associated Phenotype^LN|2c|30664006^Multiple endocrine neoplasia, type 1^SCT|
 OBX|5067|CNE|53034-5^Allelic state^LN|2c|LA6705-3^Homozygous^LN|
 OBX|5068|ST|83005-9^Variant Category^LN|2d|Simple|
 OBX|5069|ST|47998-0^Variant Display Name^LN|2d|NC_000013.11:32355249:T:C|
@@ -78,7 +78,7 @@ OBX|5076|ST|69551-0^Genomic alt allele^LN|2d|C|
 OBX|5077|ST|48002-0^Genomic Source Class [Type]^LN|2d|LA6683-2^Germline^LN|
 OBX|5078|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2d|Benign|
 OBX|5079|ST|69548-6^Genetic Variant Assessment^LN|2d|Present|
-OBX|5080|ST|81259-4^Probable Associated Phenotype^LN|2d|Hereditary breast and ovarian cancer syndrome|
+OBX|5080|CWE|81259-4^Probable Associated Phenotype^LN|2d|718220008^Hereditary breast and ovarian cancer syndrome^SCT|
 OBX|5081|CNE|53034-5^Allelic state^LN|2d|LA6705-3^Homozygous^LN|
 OBX|5082|ST|83005-9^Variant Category^LN|2e|Simple|
 OBX|5083|ST|47998-0^Variant Display Name^LN|2e|NC_000019.10:38499669:C:T|
@@ -92,5 +92,5 @@ OBX|5090|ST|69551-0^Genomic alt allele^LN|2e|T|
 OBX|5091|ST|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
 OBX|5092|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|Pathogenic|
 OBX|5093|ST|69548-6^Genetic Variant Assessment^LN|2e|Present|
-OBX|5094|ST|81259-4^Probable Associated Phenotype^LN|2e|Malignant hyperthermia|
+OBX|5094|CWE|81259-4^Probable Associated Phenotype^LN|2e|405501007^Malignant hyperthermia^SCT|
 OBX|5095|CNE|53034-5^Allelic state^LN|2e|LA6706-1^Heterozygous^LN|

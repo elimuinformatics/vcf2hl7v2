@@ -84,11 +84,14 @@ def _fix_regions_chrom(region):
 def _add_record_variants(
         record, ref_seq, patientID,
         hl7v2_helper, ratio_ad_dp, source_class, annotations, ref_build):
-    if(_valid_record(record)):
-        hl7v2_helper.add_variant_obv(
-                        record, ref_seq,
-                        ratio_ad_dp, source_class, annotations, ref_build
-                    )
+    spdi_representation = (f'{ref_seq}:{record.POS - 1}:{record.REF}:' +
+                           f'{"".join(list(map(str, list(record.ALT))))}')
+    annotation_record =\
+        get_annotations(record, annotations, spdi_representation)
+    if annotation_record is not None and _valid_record(record):
+        hl7v2_helper.add_variant_obv(record, ref_seq, ratio_ad_dp,
+                                     source_class, annotation_record,
+                                     spdi_representation, ref_build)
 
 
 def _add_region_studied(
@@ -212,12 +215,11 @@ def _get_hl7v2_message(
         ref_build, patientID, has_tabix, conversion_region, region_studied,
         ratio_ad_dp, source_class, annotations, output_filename, hl7v2_helper
     )
-    if annotations is not None:
-        create_variant_obxs(
-            vcf_reader_list, vcf_reader, ref_build, patientID,
-            has_tabix, conversion_region, ratio_ad_dp, source_class,
-            annotations, output_filename, hl7v2_helper
-        )
+    create_variant_obxs(
+        vcf_reader_list, vcf_reader, ref_build, patientID,
+        has_tabix, conversion_region, ratio_ad_dp, source_class,
+        annotations, output_filename, hl7v2_helper
+    )
     if (hl7v2_helper.index + seed - hl7v2_helper.final_rs_index) > 1:
         hl7v2_helper.message.obx[hl7v2_helper.final_rs_index].obx_5 =\
             'Positive'

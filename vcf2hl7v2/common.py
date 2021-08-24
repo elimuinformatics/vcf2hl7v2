@@ -8,6 +8,7 @@ general_logger = logging.getLogger("vcf2hl7v2.general")
 def get_allelic_state(record, ratio_ad_dp):
     allelic_state = ''
     allelic_code = ''
+    allelic_frequency = None
     # Using  the first sample
     sample = record.samples[0]
     alleles = sample.gt_alleles
@@ -34,6 +35,7 @@ def get_allelic_state(record, ratio_ad_dp):
                         sample.data.AD[0]) / float(sample.data.DP)
                 else:
                     ratio = float(sample.data.AD) / float(sample.data.DP)
+                allelic_frequency = ratio
                 if ratio > ratio_ad_dp:
                     allelic_state = "homoplasmic"
                     allelic_code = "LA6704-6"
@@ -48,7 +50,11 @@ def get_allelic_state(record, ratio_ad_dp):
             _error_log_allelicstate(record)
     else:
         _error_log_allelicstate(record)
-    return {'ALLELE': allelic_state, 'CODE': allelic_code}
+    return {
+                'ALLELE': allelic_state,
+                'CODE': allelic_code,
+                'FREQUENCY': allelic_frequency
+            }
 
 
 def extract_chrom_identifier(chrom):
@@ -97,6 +103,70 @@ def get_alphabet_index(n):
             n = n - 1
         a_index = chr(96 + remainder) + a_index
     return a_index
+
+
+def is_present(annotation, component):
+    if(not annotation[component].empty and
+       not pd.isna(annotation.iloc[0][component])):
+        return True
+    else:
+        return False
+
+
+# The following function is used to fetch the annotations for the record
+# supplied. It returns None is there are no annotations for that record
+def get_annotations(record, annotations, spdi_representation):
+    if annotations is None:
+        return {'dna_change': spdi_representation,
+                'amino_acid_change': None, 'clin_sig': "not specified",
+                'phenotype': None, 'gene_studied': 'HGNC:0000^NoGene^HGNC'}
+
+    annotation = annotations[
+                    (annotations['CHROM'] == f'chr{record.CHROM}') &
+                    (annotations['POS'] == record.POS)
+                ]
+    if len(annotation) == 0:
+        return None
+    else:
+        if(is_present(annotation, 'cHGVS') and
+           is_present(annotation, 'transcriptRefSeq')):
+            dna_change = (f'{annotation.iloc[0]["transcriptRefSeq"]}:' +
+                          f'{annotation.iloc[0]["cHGVS"]}')
+        elif(is_present(annotation, 'cHGVS') and
+             not is_present(annotation, 'transcriptRefSeq')):
+            dna_change = f'{annotation.iloc[0]["cHGVS"]}'
+        else:
+            dna_change = spdi_representation
+
+        if(is_present(annotation, 'pHGVS') and
+           is_present(annotation, 'proteinRefSeq')):
+            amino_acid_change = (f'{annotation.iloc[0]["proteinRefSeq"]}:' +
+                                 f'{annotation.iloc[0]["pHGVS"]}')
+        elif(is_present(annotation, 'pHGVS') and
+             not is_present(annotation, 'proteinRefSeq')):
+            amino_acid_change = f'{annotation.iloc[0]["pHGVS"]}'
+        else:
+            amino_acid_change = None
+
+        if is_present(annotation, 'clinSig'):
+            clin_sig = annotation.iloc[0]['clinSig']
+        else:
+            clin_sig = "not specified"
+
+        if is_present(annotation, 'phenotype'):
+            phenotype = annotation.iloc[0]['phenotype']
+        else:
+            phenotype = None
+
+        if is_present(annotation, 'gene'):
+            gene_studied = annotation.iloc[0]['gene']
+        else:
+            gene_studied = 'HGNC:0000^NoGene^HGNC'
+
+        return {'dna_change': dna_change,
+                'amino_acid_change': amino_acid_change,
+                'clin_sig': clin_sig, 'phenotype': phenotype,
+                'gene_studied': gene_studied}
 
 
 def _error_log_allelicstate(record):

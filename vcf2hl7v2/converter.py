@@ -56,6 +56,13 @@ class Converter(object):
        half-open) whereas VCF files and HL7V2 output are 1-based (or
        1-start, fully-closed).
 
+    **annotation_filename** (optional): Valid path and filename without
+    whitespace must be provided. Must be a valid tab-delimited text file.
+    Columns 1-4 are CHROM, POS, REF, ALT and must match a row in the
+    VCF. Columns 5-11 are gene, transcriptRefSeq, cHGVS, proteinRefSeq,
+    pHGVS, clinSig, phenotype. All columns must be present. Columns 1-4
+    must be populated. Columns 5-11 can contain nulls.
+
     **region_studied_filename** (optional): Subset of patient's genome
     that was studied in the generation of the VCF file. Valid path and
     filename without whitespace must be provided. Must be a valid BED
@@ -72,11 +79,14 @@ class Converter(object):
     greater than ratio_ad_dp then allelic state is
     homoplasmic; else heteroplasmic.
 
-    **source_class** (optional)(default value = germline):
+    **source_class** (optional)(default value = germline): An \
+    assertion as to whether variants in the VCF file are in the \
+    germline (i.e. inherited), somatic (e.g. arose spontaneously \
+    as cancer mutations), or mixed (i.e. may be a combination of \
+    germline and/or somatic).
 
-    **seed** (optional)(default value = 1000):
-
-    **annotation_filename** (optional):
+    **seed** (optional)(default value = 1000): Used to set the \
+    starting integer count for OBX-1 (sequence number)
     Returns
     -------
 
@@ -88,8 +98,8 @@ class Converter(object):
     def __init__(
             self, vcf_filename=None, ref_build=None, patient_id=None,
             has_tabix=False, conv_region_filename=None, conv_region_dict=None,
-            region_studied_filename=None, ratio_ad_dp=0.99,
-            source_class='germline', seed=1000, annotation_filename=None):
+            annotation_filename=None, region_studied_filename=None,
+            ratio_ad_dp=0.99, source_class='germline', seed=1000):
 
         super(Converter, self).__init__()
         if not (vcf_filename):
@@ -104,28 +114,6 @@ class Converter(object):
             raise
         except BaseException:
             self._generate_exception("Please provide valid 'vcf_filename'")
-        self.annotation_filename = annotation_filename
-        if self.annotation_filename is None:
-            self.annotations = 'Not Supplied'
-        else:
-            try:
-                self.annotations = pd.read_csv(
-                            self.annotation_filename,
-                            names=[
-                                'CHROM', 'POS', 'REF', 'ALT',
-                                'transcriptRefSeq', 'cHGVS', 'proteinRefSeq',
-                                'pHGVS', 'clinSig', 'phenotype'
-                            ],
-                            sep='\t'
-                        )
-                if len(self.annotations) == 0:
-                    self.annotations = None
-            except FileNotFoundError:
-                raise
-            except BaseException:
-                self._generate_exception(
-                        "Please provide valid 'annotation_filename'"
-                    )
         if not patient_id:
             patient_id = self._vcf_reader.samples[0]
         if conv_region_filename:
@@ -147,6 +135,26 @@ class Converter(object):
                     "Please provide valid 'conv_region_dict'")
         else:
             self.conversion_region = None
+        self.annotation_filename = annotation_filename
+        if self.annotation_filename is None:
+            self.annotations = None
+        else:
+            try:
+                self.annotations = pd.read_csv(
+                            self.annotation_filename,
+                            names=[
+                                'CHROM', 'POS', 'REF', 'ALT', 'gene',
+                                'transcriptRefSeq', 'cHGVS', 'proteinRefSeq',
+                                'pHGVS', 'clinSig', 'phenotype'
+                            ],
+                            sep='\t'
+                        )
+            except FileNotFoundError:
+                raise
+            except BaseException:
+                self._generate_exception(
+                        "Please provide valid 'annotation_filename'"
+                    )
         if region_studied_filename:
             try:
                 self.region_studied = pyranges.read_bed(
