@@ -70,6 +70,11 @@ class _HL7V2_Helper:
         else:
             allelic_state = f'{alleles["CODE"]}^{alleles["ALLELE"].title()}^LN'
 
+        if source_class.title() == Genomic_Source_Class.GERMLINE.value:
+            source_class_value = 'LA6683-2^Germline^LN'
+        elif source_class.title() == Genomic_Source_Class.SOMATIC.value:
+            source_class_value = 'LA6684-0^Somatic^LN'
+
         a_index = f'2{get_alphabet_index(self.variant_index)}'
         _create_variant_obx_segment(
             self, obx_1=str(self.index), obx_2="ST",
@@ -119,7 +124,7 @@ class _HL7V2_Helper:
         _create_variant_obx_segment(
             self, obx_1=str(self.index),
             obx_2="ST", obx_3="48002-0^Genomic Source Class [Type]^LN",
-            obx_4=a_index, obx_5=source_class,
+            obx_4=a_index, obx_5=source_class_value,
         )
         _create_variant_obx_segment(
             self, obx_1=str(self.index),
@@ -144,7 +149,8 @@ class _HL7V2_Helper:
                 obx_2="CNE", obx_3="81258-6^Allelic frequency^LN",
                 obx_4=a_index, obx_5=f'{alleles["FREQUENCY"]}',
             )
-        if allelic_state is not None and 'Germline' in source_class:
+        if(allelic_state is not None and
+           source_class.title() == Genomic_Source_Class.GERMLINE.value):
             _create_variant_obx_segment(
                 self, obx_1=str(self.index),
                 obx_2="CNE", obx_3="53034-5^Allelic state^LN",

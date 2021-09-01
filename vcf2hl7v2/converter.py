@@ -176,7 +176,7 @@ class Converter(object):
         if not validate_seed(seed):
             raise Exception("Please provide a valid seed")
 
-        if source_class not in ["germline", "somatic"]:
+        if source_class.title() not in Genomic_Source_Class.set_():
             raise Exception(
                 'Please provide a valid Source Class ("germline" or "somatic")'
             )
@@ -186,10 +186,7 @@ class Converter(object):
         self.patient_id = patient_id
         self.ref_build = ref_build
         self.conv_region_filename = conv_region_filename
-        if source_class == 'germline':
-            self.source_class = 'LA6683-2^Germline^LN'
-        elif source_class == 'somatic':
-            self.source_class = 'LA6684-0^Somatic^LN'
+        self.source_class = source_class
         self.seed = seed
         general_logger.info("Converter class instantiated successfully")
 

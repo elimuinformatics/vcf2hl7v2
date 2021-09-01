@@ -1,8 +1,22 @@
 import pandas as pd
 import logging
 import re
+from enum import Enum
 
 general_logger = logging.getLogger("vcf2hl7v2.general")
+
+GERMLINE = 'Germline'
+SOMATIC = 'Somatic'
+
+
+class Genomic_Source_Class(Enum):
+
+    @classmethod
+    def set_(cls):
+        return set(map(lambda c: c.value, cls))
+
+    GERMLINE = GERMLINE
+    SOMATIC = SOMATIC
 
 
 def get_allelic_state(record, ratio_ad_dp):
