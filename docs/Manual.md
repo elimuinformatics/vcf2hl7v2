@@ -3,10 +3,41 @@ vcf2hl7v2 Manual
 ===================
 
 Introduction
--------------------------
+===================
 
 
 Conceptually, the utility takes a VCF as input and outputs a set of HL7 V2 OBX observations. These OBX observations can be then incorporated into an overarching HL7 V2 ORU message.
+
+Clinical annotations
+=====================
+
+Where clinical annotations are supplied, the software will add them to variant observations. The following annotations are supported:
+
+-   **gene** (code^symbol^codeSystem): Gene containing the annotated variant. Default value is 'HGNC:0000^NoGene^HGNC'.
+
+-   **transcriptRefSeq** (STRING): Valid transcript reference sequence identifier (e.g.  'NM_001354609.2')
+
+-   **cHGVS** (STRING): Valid c.HGVS expression, minus the reference sequence prefix (e.g. 'c.1799_1800delinsAA')
+
+-   **proteinRefSeq** (STRING): Valid protein reference sequence identifier (e.g. 'NP_001341538.1')
+
+-   **pHGVS** (STRING): Valid p.HGVS expression, minus the reference sequence prefix (e.g. 'p.V600E')
+
+-   **clinSig** (STRING): An indication of the clinical significance of the variant. Suggested values are those used by ClinVar, listed here.
+
+-   **phenotype** (code^symbol^codeSystem): The (coded) condition or phenotype associated with this variant.
+
+Annotations are supplied in a tab-delimited file. Columns 1-4 are CHROM, POS, REF, ALT, and must match a row in the VCF. Columns 5-11 are gene, transcriptRefSeq, cHGVS, proteinRefSeq, pHGVS, clinSig, phenotype. All columns must be present. Columns 1-4 must be populated. Columns 5-11 can contain nulls.
+
+**Sample annotation file:**
+
+|**CHROM**|**POS**|**REF**|**ALT**|**gene**|**transcriptRefSeq**|**cHGVS**|**proteinRefSeq**|**pHGVS**|**clinSig**|**phenotype**|
+| :- | :- | :- | :- | :- | :- | :- | :- | :- | :- | :- |
+|chr5|112841059|T|A|HGNC:583^APC^HGNC|NM_001127510.3|c.5465T>A||p.Val1822Asp|Benign|72900001^Familial multiple polyposis syndrome^SCT|
+|chr11|47348490|T|C|HGNC:7551^MYBPC3^HGNC|NM_000256.3|c.706A>G||p.Ser236Gly|Likely benign|35728003^Familial cardiomyopathy^SCT|
+|chr11|64804546|T|C|HGNC:7010^MEN1^HGNC|NM_130800.2|c.1516A>G||p.Thr506Ala|Benign|30664006^Multiple endocrine neoplasia, type 1^SCT|
+|chr13|32355250|T|C|HGNC:1101^BRCA2^HGNC|NM_000059.4|c.7397T>C||p.Val2466Ala|Benign|718220008^Hereditary breast and ovarian cancer syndrome^SCT|
+|chr19|38499670|C|T|HGNC:10483^RYR1^HGNC|NM_001042723.2|c.7063C>T||p.Arg2355Trp|Pathogenic|405501007^Malignant hyperthermia^SCT|
 
 Conversion logic
 ================
