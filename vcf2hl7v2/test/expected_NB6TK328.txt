@@ -23,74 +23,84 @@ OBX|5021|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.a|1204798^1229435|
 OBX|5022|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.b|11088361^11134830|
 OBX|5023|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.c|38432699^38588564|
 OBX|5024|NR|51959-5^Range(s) of DNA sequence examined^LN|1j.d|55150766^55158732|
-OBX|5025|TX|51968-6^Discrete variation analysis overall interpretation^LN|1|Positive|
-OBX|5026|ST|83005-9^Variant Category^LN|2a|Simple|
+OBX|5025|TX|51968-6^Genetic Analysis Overall Interpretation^UFMOLLRR|1|Positive|
+OBX|5026|CWE|83005-9^Variant Category^LN|2a|LA26801-3^Simple^LN|
 OBX|5027|ST|47998-0^Variant Display Name^LN|2a|NC_000005.10:112841058:T:A|
-OBX|5028|CWE|48018-6^Gene Studied^LN|2a|HGNC:583^APC^HGNC|
-OBX|5029|ST|48004-6^DNA Change c.HGVS^LN|2a|NM_001127510.3:c.5465T>A|
-OBX|5030|ST|48005-3^Amino Acid Change p.HGVS^LN|2a|p.Val1822Asp|
-OBX|5031|ST|48013-7^Genomic reference sequence^LN|2a|NC_000005.10|
+OBX|5028|CWE|48018-6^Gene Studied^UFMOLLRR|2a|HGNC:583^APC^HGNC|
+OBX|5029|CWE|48004-6^DNA Change c.HGVS^LN|2a|NM_001127510.3:c.5465T>A|
+OBX|5030|CWE|48005-3^Amino Acid Change p.HGVS^LN|2a|p.Val1822Asp|
+OBX|5031|CWE|48013-7^Genomic reference sequence^UFMOLLRR|2a|NC_000005.10|
 OBX|5032|ST|69547-8^Genomic ref allele^LN|2a|T|
 OBX|5033|NR|81254-5^Genomic allele start-end^LN|2a|112841059|
 OBX|5034|ST|69551-0^Genomic alt allele^LN|2a|A|
-OBX|5035|ST|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
-OBX|5036|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|Benign|
-OBX|5037|ST|69548-6^Genetic Variant Assessment^LN|2a|Present|
-OBX|5038|CWE|81259-4^Probable Associated Phenotype^LN|2a|72900001^Familial multiple polyposis syndrome^SCT|
-OBX|5039|CNE|53034-5^Allelic state^LN|2a|LA6705-3^Homozygous^LN|
-OBX|5040|ST|83005-9^Variant Category^LN|2b|Simple|
-OBX|5041|ST|47998-0^Variant Display Name^LN|2b|NC_000011.10:47348489:T:C|
-OBX|5042|CWE|48018-6^Gene Studied^LN|2b|HGNC:7551^MYBPC3^HGNC|
-OBX|5043|ST|48004-6^DNA Change c.HGVS^LN|2b|NM_000256.3:c.706A>G|
-OBX|5044|ST|48005-3^Amino Acid Change p.HGVS^LN|2b|p.Ser236Gly|
-OBX|5045|ST|48013-7^Genomic reference sequence^LN|2b|NC_000011.10|
-OBX|5046|ST|69547-8^Genomic ref allele^LN|2b|T|
-OBX|5047|NR|81254-5^Genomic allele start-end^LN|2b|47348490|
-OBX|5048|ST|69551-0^Genomic alt allele^LN|2b|C|
-OBX|5049|ST|48002-0^Genomic Source Class [Type]^LN|2b|LA6683-2^Germline^LN|
-OBX|5050|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2b|Likely benign|
-OBX|5051|ST|69548-6^Genetic Variant Assessment^LN|2b|Present|
-OBX|5052|CWE|81259-4^Probable Associated Phenotype^LN|2b|35728003^Familial cardiomyopathy^SCT|
-OBX|5053|CNE|53034-5^Allelic state^LN|2b|LA6706-1^Heterozygous^LN|
-OBX|5054|ST|83005-9^Variant Category^LN|2c|Simple|
-OBX|5055|ST|47998-0^Variant Display Name^LN|2c|NC_000011.10:64804545:T:C|
-OBX|5056|CWE|48018-6^Gene Studied^LN|2c|HGNC:7010^MEN1^HGNC|
-OBX|5057|ST|48004-6^DNA Change c.HGVS^LN|2c|NM_130800.2:c.1516A>G|
-OBX|5058|ST|48005-3^Amino Acid Change p.HGVS^LN|2c|p.Thr506Ala|
-OBX|5059|ST|48013-7^Genomic reference sequence^LN|2c|NC_000011.10|
-OBX|5060|ST|69547-8^Genomic ref allele^LN|2c|T|
-OBX|5061|NR|81254-5^Genomic allele start-end^LN|2c|64804546|
-OBX|5062|ST|69551-0^Genomic alt allele^LN|2c|C|
-OBX|5063|ST|48002-0^Genomic Source Class [Type]^LN|2c|LA6683-2^Germline^LN|
-OBX|5064|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2c|Benign|
-OBX|5065|ST|69548-6^Genetic Variant Assessment^LN|2c|Present|
-OBX|5066|CWE|81259-4^Probable Associated Phenotype^LN|2c|30664006^Multiple endocrine neoplasia, type 1^SCT|
-OBX|5067|CNE|53034-5^Allelic state^LN|2c|LA6705-3^Homozygous^LN|
-OBX|5068|ST|83005-9^Variant Category^LN|2d|Simple|
-OBX|5069|ST|47998-0^Variant Display Name^LN|2d|NC_000013.11:32355249:T:C|
-OBX|5070|CWE|48018-6^Gene Studied^LN|2d|HGNC:1101^BRCA2^HGNC|
-OBX|5071|ST|48004-6^DNA Change c.HGVS^LN|2d|NM_000059.4:c.7397T>C|
-OBX|5072|ST|48005-3^Amino Acid Change p.HGVS^LN|2d|p.Val2466Ala|
-OBX|5073|ST|48013-7^Genomic reference sequence^LN|2d|NC_000013.11|
-OBX|5074|ST|69547-8^Genomic ref allele^LN|2d|T|
-OBX|5075|NR|81254-5^Genomic allele start-end^LN|2d|32355250|
-OBX|5076|ST|69551-0^Genomic alt allele^LN|2d|C|
-OBX|5077|ST|48002-0^Genomic Source Class [Type]^LN|2d|LA6683-2^Germline^LN|
-OBX|5078|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2d|Benign|
-OBX|5079|ST|69548-6^Genetic Variant Assessment^LN|2d|Present|
-OBX|5080|CWE|81259-4^Probable Associated Phenotype^LN|2d|718220008^Hereditary breast and ovarian cancer syndrome^SCT|
-OBX|5081|CNE|53034-5^Allelic state^LN|2d|LA6705-3^Homozygous^LN|
-OBX|5082|ST|83005-9^Variant Category^LN|2e|Simple|
-OBX|5083|ST|47998-0^Variant Display Name^LN|2e|NC_000019.10:38499669:C:T|
-OBX|5084|CWE|48018-6^Gene Studied^LN|2e|HGNC:10483^RYR1^HGNC|
-OBX|5085|ST|48004-6^DNA Change c.HGVS^LN|2e|NM_001042723.2:c.7063C>T|
-OBX|5086|ST|48005-3^Amino Acid Change p.HGVS^LN|2e|p.Arg2355Trp|
-OBX|5087|ST|48013-7^Genomic reference sequence^LN|2e|NC_000019.10|
-OBX|5088|ST|69547-8^Genomic ref allele^LN|2e|C|
-OBX|5089|NR|81254-5^Genomic allele start-end^LN|2e|38499670|
-OBX|5090|ST|69551-0^Genomic alt allele^LN|2e|T|
-OBX|5091|ST|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
-OBX|5092|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|Pathogenic|
-OBX|5093|ST|69548-6^Genetic Variant Assessment^LN|2e|Present|
-OBX|5094|CWE|81259-4^Probable Associated Phenotype^LN|2e|405501007^Malignant hyperthermia^SCT|
-OBX|5095|CNE|53034-5^Allelic state^LN|2e|LA6706-1^Heterozygous^LN|
+OBX|5035|ST|48000-4^Chromosome^LN|2a|5|
+OBX|5036|CWE|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
+OBX|5037|CWE|81304-8^Variant Analysis Method [Type]^LN|2a|LA26398-0^Sequencing^LN|
+OBX|5038|CWE|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|Benign|
+OBX|5039|CWE|69548-6^Genetic Variant Assessment^LN|2a|LA9633-4^Present^LN|
+OBX|5040|CWE|81259-4^Probable Associated Phenotype^LN|2a|72900001^Familial multiple polyposis syndrome^SCT|
+OBX|5041|CWE|53034-5^Allelic state^LN|2a|LA6705-3^Homozygous^LN|
+OBX|5042|CWE|83005-9^Variant Category^LN|2b|LA26801-3^Simple^LN|
+OBX|5043|ST|47998-0^Variant Display Name^LN|2b|NC_000011.10:47348489:T:C|
+OBX|5044|CWE|48018-6^Gene Studied^UFMOLLRR|2b|HGNC:7551^MYBPC3^HGNC|
+OBX|5045|CWE|48004-6^DNA Change c.HGVS^LN|2b|NM_000256.3:c.706A>G|
+OBX|5046|CWE|48005-3^Amino Acid Change p.HGVS^LN|2b|p.Ser236Gly|
+OBX|5047|CWE|48013-7^Genomic reference sequence^UFMOLLRR|2b|NC_000011.10|
+OBX|5048|ST|69547-8^Genomic ref allele^LN|2b|T|
+OBX|5049|NR|81254-5^Genomic allele start-end^LN|2b|47348490|
+OBX|5050|ST|69551-0^Genomic alt allele^LN|2b|C|
+OBX|5051|ST|48000-4^Chromosome^LN|2b|11|
+OBX|5052|CWE|48002-0^Genomic Source Class [Type]^LN|2b|LA6683-2^Germline^LN|
+OBX|5053|CWE|81304-8^Variant Analysis Method [Type]^LN|2b|LA26398-0^Sequencing^LN|
+OBX|5054|CWE|53037-8^Genetic Sequence Variation Clinical Significance^LN|2b|Likely benign|
+OBX|5055|CWE|69548-6^Genetic Variant Assessment^LN|2b|LA9633-4^Present^LN|
+OBX|5056|CWE|81259-4^Probable Associated Phenotype^LN|2b|35728003^Familial cardiomyopathy^SCT|
+OBX|5057|CWE|53034-5^Allelic state^LN|2b|LA6706-1^Heterozygous^LN|
+OBX|5058|CWE|83005-9^Variant Category^LN|2c|LA26801-3^Simple^LN|
+OBX|5059|ST|47998-0^Variant Display Name^LN|2c|NC_000011.10:64804545:T:C|
+OBX|5060|CWE|48018-6^Gene Studied^UFMOLLRR|2c|HGNC:7010^MEN1^HGNC|
+OBX|5061|CWE|48004-6^DNA Change c.HGVS^LN|2c|NM_130800.2:c.1516A>G|
+OBX|5062|CWE|48005-3^Amino Acid Change p.HGVS^LN|2c|p.Thr506Ala|
+OBX|5063|CWE|48013-7^Genomic reference sequence^UFMOLLRR|2c|NC_000011.10|
+OBX|5064|ST|69547-8^Genomic ref allele^LN|2c|T|
+OBX|5065|NR|81254-5^Genomic allele start-end^LN|2c|64804546|
+OBX|5066|ST|69551-0^Genomic alt allele^LN|2c|C|
+OBX|5067|ST|48000-4^Chromosome^LN|2c|11|
+OBX|5068|CWE|48002-0^Genomic Source Class [Type]^LN|2c|LA6683-2^Germline^LN|
+OBX|5069|CWE|81304-8^Variant Analysis Method [Type]^LN|2c|LA26398-0^Sequencing^LN|
+OBX|5070|CWE|53037-8^Genetic Sequence Variation Clinical Significance^LN|2c|Benign|
+OBX|5071|CWE|69548-6^Genetic Variant Assessment^LN|2c|LA9633-4^Present^LN|
+OBX|5072|CWE|81259-4^Probable Associated Phenotype^LN|2c|30664006^Multiple endocrine neoplasia, type 1^SCT|
+OBX|5073|CWE|53034-5^Allelic state^LN|2c|LA6705-3^Homozygous^LN|
+OBX|5074|CWE|83005-9^Variant Category^LN|2d|LA26801-3^Simple^LN|
+OBX|5075|ST|47998-0^Variant Display Name^LN|2d|NC_000013.11:32355249:T:C|
+OBX|5076|CWE|48018-6^Gene Studied^UFMOLLRR|2d|HGNC:1101^BRCA2^HGNC|
+OBX|5077|CWE|48004-6^DNA Change c.HGVS^LN|2d|NM_000059.4:c.7397T>C|
+OBX|5078|CWE|48005-3^Amino Acid Change p.HGVS^LN|2d|p.Val2466Ala|
+OBX|5079|CWE|48013-7^Genomic reference sequence^UFMOLLRR|2d|NC_000013.11|
+OBX|5080|ST|69547-8^Genomic ref allele^LN|2d|T|
+OBX|5081|NR|81254-5^Genomic allele start-end^LN|2d|32355250|
+OBX|5082|ST|69551-0^Genomic alt allele^LN|2d|C|
+OBX|5083|ST|48000-4^Chromosome^LN|2d|13|
+OBX|5084|CWE|48002-0^Genomic Source Class [Type]^LN|2d|LA6683-2^Germline^LN|
+OBX|5085|CWE|81304-8^Variant Analysis Method [Type]^LN|2d|LA26398-0^Sequencing^LN|
+OBX|5086|CWE|53037-8^Genetic Sequence Variation Clinical Significance^LN|2d|Benign|
+OBX|5087|CWE|69548-6^Genetic Variant Assessment^LN|2d|LA9633-4^Present^LN|
+OBX|5088|CWE|81259-4^Probable Associated Phenotype^LN|2d|718220008^Hereditary breast and ovarian cancer syndrome^SCT|
+OBX|5089|CWE|53034-5^Allelic state^LN|2d|LA6705-3^Homozygous^LN|
+OBX|5090|CWE|83005-9^Variant Category^LN|2e|LA26801-3^Simple^LN|
+OBX|5091|ST|47998-0^Variant Display Name^LN|2e|NC_000019.10:38499669:C:T|
+OBX|5092|CWE|48018-6^Gene Studied^UFMOLLRR|2e|HGNC:10483^RYR1^HGNC|
+OBX|5093|CWE|48004-6^DNA Change c.HGVS^LN|2e|NM_001042723.2:c.7063C>T|
+OBX|5094|CWE|48005-3^Amino Acid Change p.HGVS^LN|2e|p.Arg2355Trp|
+OBX|5095|CWE|48013-7^Genomic reference sequence^UFMOLLRR|2e|NC_000019.10|
+OBX|5096|ST|69547-8^Genomic ref allele^LN|2e|C|
+OBX|5097|NR|81254-5^Genomic allele start-end^LN|2e|38499670|
+OBX|5098|ST|69551-0^Genomic alt allele^LN|2e|T|
+OBX|5099|ST|48000-4^Chromosome^LN|2e|19|
+OBX|5100|CWE|48002-0^Genomic Source Class [Type]^LN|2e|LA6683-2^Germline^LN|
+OBX|5101|CWE|81304-8^Variant Analysis Method [Type]^LN|2e|LA26398-0^Sequencing^LN|
+OBX|5102|CWE|53037-8^Genetic Sequence Variation Clinical Significance^LN|2e|Pathogenic|
+OBX|5103|CWE|69548-6^Genetic Variant Assessment^LN|2e|LA9633-4^Present^LN|
+OBX|5104|CWE|81259-4^Probable Associated Phenotype^LN|2e|405501007^Malignant hyperthermia^SCT|
+OBX|5105|CWE|53034-5^Allelic state^LN|2e|LA6706-1^Heterozygous^LN|

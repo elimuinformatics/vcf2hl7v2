@@ -10,17 +10,13 @@ import filecmp
 suite = doctest.DocTestSuite(vcf2hl7v2)
 
 
-class TestVcf2HL7v2Inputs(unittest.TestCase):
+class Testvcf2hl7v2Inputs(unittest.TestCase):
 
-    def test_required_vcf_filename(self):
+    def test_required_filename(self):
         with self.assertRaises(Exception) as context:
             vcf2hl7v2.Converter()
         self.assertTrue(
-            'You must provide vcf_filename' in str(context.exception))
-
-    def test_invalid_vcf_filename(self):
-        self.assertRaises(FileNotFoundError,
-                          vcf2hl7v2.Converter, *['Hello', 'GRCh38'])
+            'You must provide a vcf or a xml file' in str(context.exception))
 
     def test_required_ref_build(self):
         with self.assertRaises(Exception) as context:
@@ -119,7 +115,8 @@ class TestTranslation(unittest.TestCase):
     def test_wo_patient_id(self):
         self.maxDiff = None
         o_vcf_2_hl7v2 = vcf2hl7v2.Converter(os.path.join(
-            os.path.dirname(__file__), 'vcf_example1.vcf'), 'GRCh37')
+            os.path.dirname(__file__), 'vcf_example1.vcf'), 'GRCh37',
+            source_class='germline')
         output_filename = os.path.join(os.path.dirname(
             __file__), self.TEST_RESULT_DIR, 'hl7v2_wo_patient_example1.txt')
         expected_output_filename = os.path.join(
@@ -133,7 +130,8 @@ class TestTranslation(unittest.TestCase):
     def test_with_patient_id(self):
         self.maxDiff = None
         o_vcf_2_hl7v2 = vcf2hl7v2.Converter(os.path.join(os.path.dirname(
-            __file__), 'vcf_example1.vcf'), 'GRCh37', 'HG00628')
+            __file__), 'vcf_example1.vcf'), 'GRCh37', 'HG00628',
+            source_class='germline')
         output_filename = os.path.join(os.path.dirname(
             __file__), self.TEST_RESULT_DIR, 'hl7v2_with_patient_example1.txt')
         expected_output_filename = os.path.join(os.path.dirname(
@@ -161,7 +159,8 @@ class TestTranslation(unittest.TestCase):
             'GRCh38',
             'HG00628',
             conv_region_filename=conv_region_filename,
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
         self.assertEqual(
                 filecmp.cmp(output_filename, expected_output_filename),
@@ -188,7 +187,8 @@ class TestTranslation(unittest.TestCase):
             'GRCh38',
             'HG00628',
             conv_region_dict=conv_region_dict,
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
         self.assertEqual(
                 filecmp.cmp(output_filename, expected_output_filename),
@@ -214,7 +214,8 @@ class TestTranslation(unittest.TestCase):
             'GRCh38',
             'HG00628',
             conv_region_filename=conv_region_filename,
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
         self.assertEqual(
                 filecmp.cmp(output_filename, expected_output_filename),
@@ -232,7 +233,8 @@ class TestTranslation(unittest.TestCase):
                 'vcf_example4.vcf'),
             'GRCh38',
             'HG00628',
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
 
     def test_empty_hl7v2_txt(self):
@@ -246,7 +248,8 @@ class TestTranslation(unittest.TestCase):
                 'vcf_example4.vcf'),
             'GRCh38',
             'HG00628',
-            conv_region_filename=conv_region_filename)
+            conv_region_filename=conv_region_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
 
     def test_tabix(self):
@@ -267,7 +270,8 @@ class TestTranslation(unittest.TestCase):
             'HG00628',
             has_tabix=True,
             conv_region_filename=conv_region_filename,
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
         self.assertEqual(
                 filecmp.cmp(output_filename, expected_output_filename),
@@ -276,7 +280,7 @@ class TestTranslation(unittest.TestCase):
 
     def test_annotation(self):
         o_vcf_2_hl7v2 = vcf2hl7v2.Converter(
-                vcf_filename=os.path.join(
+                filename=os.path.join(
                                         os.path.dirname(__file__),
                                         'NB6TK328_filtered.vcf'
                                     ),
@@ -309,6 +313,38 @@ class TestTranslation(unittest.TestCase):
                 filecmp.cmp(output_filename, expected_output_filename),
                 True
             )
+
+    # def test_qci_xml(self):
+    #     output_filename = os.path.join(os.path.dirname(
+    #         __file__), self.TEST_RESULT_DIR, 'qci_hl7v2.txt')
+    #     expected_output_filename = os.path.join(
+    #         os.path.dirname(__file__), 'expected_qci_xml.txt')
+    #     o_vcf_2_hl7v2 = vcf2hl7v2.Converter(
+    #         filename=os.path.join(os.path.dirname(__file__), 'QCI.xml'),
+    #         ref_build='GRCh37',
+    #         patient_id='HG00628',
+    #         source_class='somatic')
+    #     o_vcf_2_hl7v2.convert(output_filename)
+    #     self.assertEqual(
+    #             filecmp.cmp(output_filename, expected_output_filename),
+    #             True
+    #         )
+
+    # def test_qiagen_vcf(self):
+    #     output_filename = os.path.join(os.path.dirname(
+    #         __file__), self.TEST_RESULT_DIR, 'qiagen_vcf_hl7v2.txt')
+    #     expected_output_filename = os.path.join(
+    #         os.path.dirname(__file__), 'expected_qiagen_vcf.txt')
+    #     o_vcf_2_hl7v2 = vcf2hl7v2.Converter(
+    #         filename=os.path.join(os.path.dirname(__file__), 'qiagen.vcf'),
+    #         ref_build='GRCh37',
+    #         vcf_type='QiaGen',
+    #         source_class='germline')
+    #     o_vcf_2_hl7v2.convert(output_filename)
+    #     self.assertEqual(
+    #             filecmp.cmp(output_filename, expected_output_filename),
+    #             True
+    #         )
 
 
 class TestLogger(unittest.TestCase):
@@ -369,7 +405,8 @@ class TestLogger(unittest.TestCase):
             'GRCh38',
             'HG00628',
             conv_region_filename=conv_region_filename,
-            region_studied_filename=region_studied_filename)
+            region_studied_filename=region_studied_filename,
+            source_class='germline')
         o_vcf_2_hl7v2.convert(output_filename)
         self.assertEqual(os.path.exists(self.log_general_filename), True)
         self.assertEqual(os.path.exists(
@@ -377,7 +414,7 @@ class TestLogger(unittest.TestCase):
 
 
 suite.addTests(
-    unittest.TestLoader().loadTestsFromTestCase(TestVcf2HL7v2Inputs))
+    unittest.TestLoader().loadTestsFromTestCase(Testvcf2hl7v2Inputs))
 suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestTranslation))
 suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestLogger))
 
