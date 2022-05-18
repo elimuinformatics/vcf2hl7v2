@@ -1,4 +1,6 @@
 import vcf
+import xml.etree.ElementTree as ET
+import xmltodict
 import pyranges
 from .hl7v2_message_generator import _get_hl7v2_message
 import logging
@@ -15,11 +17,11 @@ class Converter(object):
     Parameters
     ----------
 
-    **vcf_filename** (required): Path to a text-based or bgzipped VCF
-    file. Valid path and filename without whitespace must be provided.
-    VCF file must conform to VCF Version 4.1 or later. FORMAT.GT must be
-    present. Multi-sample VCFs are allowed, but only the first sample
-    will be converted.
+    **filename** (required): Path to a text-based or bgzipped VCF
+    file or qci xml file. Valid path and filename without whitespace
+    must be provided. VCF file must conform to VCF Version 4.1 or
+    later. FORMAT.GT must be present. Multi-sample VCFs are allowed,
+    but only the first sample will be converted.
     has_tabix (required if VCF file is bgzipped): Set to 'True' if
     there is a tabix index. Tabix file must have the same name as the
     bgzipped VCF file, with a '.tbi' extension, and must be in the same
@@ -87,35 +89,73 @@ class Converter(object):
 
     **seed** (optional)(default value = 1000): Used to set the \
     starting integer count for OBX-1 (sequence number)
+
+    **vcf_type** (optional): Type of annotated vcf, for example: \
+    Qiagen, SnpEff.
+
+    **variant_analysis_method** (optional)(default value = Sequencing): Used \
+    to set the variant analysis method.
+
+    **report_filename** (optional): Path to a text-based report file.
+
     Returns
+
     -------
 
     Object
+
     An Instance of Converter that helps to convert vcf file.
 
     """
 
-    def __init__(
-            self, vcf_filename=None, ref_build=None, patient_id=None,
-            has_tabix=False, conv_region_filename=None, conv_region_dict=None,
-            annotation_filename=None, region_studied_filename=None,
-            ratio_ad_dp=0.99, source_class='germline', seed=1000):
+    def __init__(self, filename=None, ref_build=None, patient_id=None,
+                 has_tabix=False, conv_region_filename=None,
+                 conv_region_dict=None, annotation_filename=None,
+                 region_studied_filename=None, ratio_ad_dp=0.99,
+                 source_class=None, seed=1000, vcf_type=None,
+                 variant_analysis_method="Sequencing", report_filename=None):
 
         super(Converter, self).__init__()
-        if not (vcf_filename):
-            raise Exception('You must provide vcf_filename')
+        if not filename:
+            raise Exception('You must provide a vcf or a xml file')
         if not ref_build or ref_build not in ["GRCh37", "GRCh38"]:
             raise Exception(
                 'You must provide build number ("GRCh37" or "GRCh38")')
-        self.vcf_filename = vcf_filename
-        try:
-            self._vcf_reader = vcf.Reader(filename=vcf_filename)
-        except FileNotFoundError:
-            raise
-        except BaseException:
-            self._generate_exception("Please provide valid 'vcf_filename'")
-        if not patient_id:
+        if not validate_filename(filename):
+            raise Exception('Either filename or extension is not correct')
+        if is_xml_file(filename):
+            self._vcf_reader = None
+            try:
+                with open(filename, encoding='utf-8') as fd:
+                    xml_dict = xmltodict.parse(fd.read())
+                    report = xml_dict['report']
+                self._xml_reader = report
+            except FileNotFoundError:
+                raise
+            except BaseException:
+                self._generate_exception("Please provide valid 'xml_filename'")
+        else:
+            self._xml_reader = None
+            try:
+                self._vcf_reader = vcf.Reader(filename=filename)
+            except FileNotFoundError:
+                raise
+            except BaseException:
+                self._generate_exception("Please provide valid 'vcf_filename'")
+        self.report = None
+        if report_filename and is_txt_file(report_filename):
+            try:
+                with open(report_filename, encoding='utf-8') as fd:
+                    self.report = fd.readlines()
+            except FileNotFoundError:
+                raise
+            except BaseException:
+                self._generate_exception(
+                    "Please provide valid 'report_filename'")
+        if not patient_id and self._vcf_reader is not None:
             patient_id = self._vcf_reader.samples[0]
+        if not patient_id and self._xml_reader is not None:
+            patient_id = 'patient_id'
         if conv_region_filename:
             try:
                 self.conversion_region = pyranges.read_bed(
@@ -176,9 +216,21 @@ class Converter(object):
         if not validate_seed(seed):
             raise Exception("Please provide a valid seed")
 
-        if source_class.title() not in Genomic_Source_Class.set_():
+        if(source_class is not None and
+           source_class.title() not in Genomic_Source_Class.set_()):
             raise Exception(
                 'Please provide a valid Source Class ("germline" or "somatic")'
+            )
+
+        if(vcf_type is not None and
+           vcf_type.lower() not in ["qiagen", "snpeff"]):
+            raise Exception(
+                'Please provide a valid vcf_type ("qiagen", "snpeff")'
+            )
+
+        if variant_analysis_method.lower() not in SEQUENCING_TO_CODE.keys():
+            raise Exception(
+                'Please provide a valid variant analysis method'
             )
 
         self.ratio_ad_dp = ratio_ad_dp
@@ -188,6 +240,8 @@ class Converter(object):
         self.conv_region_filename = conv_region_filename
         self.source_class = source_class
         self.seed = seed
+        self.vcf_type = vcf_type if (vcf_type is None) else vcf_type.lower()
+        self.variant_analysis_method = variant_analysis_method
         general_logger.info("Converter class instantiated successfully")
 
     def convert(self, output_filename='hl7v2.txt'):
@@ -201,12 +255,15 @@ class Converter(object):
 
         """
         general_logger.info("Starting VCF to HL7V2 Conversion")
-        _get_hl7v2_message(
-            list(self._vcf_reader), self._vcf_reader, self.ref_build,
-            self.patient_id, self.has_tabix, self.conversion_region,
-            self.source_class, self.region_studied, self.ratio_ad_dp,
-            self.annotations, self.seed, output_filename)
+        hl7v2_oru_message =\
+            _get_hl7v2_message(
+                self._vcf_reader, self._xml_reader, self.ref_build,
+                self.patient_id, self.has_tabix, self.conversion_region,
+                self.source_class, self.region_studied, self.ratio_ad_dp,
+                self.annotations, self.seed, self.vcf_type,
+                self.variant_analysis_method, self.report, output_filename)
         general_logger.info("Completed VCF to HL7V2 Conversion")
+        return hl7v2_oru_message
 
     def _generate_exception(self, msg):
         general_logger.error(msg, exc_info=True)
