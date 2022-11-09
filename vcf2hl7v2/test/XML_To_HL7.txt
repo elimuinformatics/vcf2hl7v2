@@ -1,0 +1,202 @@
+
+
+OBX|1001|ST|83005-9^Variant Category^LN|2a|Simple|
+OBX|1002|ST|47998-0^Variant Display Name^LN|2a|NC_000002.11:47601028:G:C|
+OBX|1003|CWE|48018-6^Gene Studied^LN|2a|HGNC:0000^NoGene^HGNC|
+OBX|1004|ST|48004-6^DNA Change c.HGVS^LN|2a|ENST00000263735.8:c.267G>C|
+OBX|1005|ST|48005-3^Amino Acid Change p.HGVS^LN|2a|p.Q89H|
+OBX|1006|ST|48013-7^Genomic reference sequence^LN|2a|NC_000002.11|
+OBX|1007|ST|69547-8^Genomic ref allele^LN|2a|G|
+OBX|1008|NR|81254-5^Genomic allele start-end^LN|2a|47601029|
+OBX|1009|ST|69551-0^Genomic alt allele^LN|2a|C|
+OBX|1010|ST|48002-0^Genomic Source Class [Type]^LN|2a|LA6683-2^Germline^LN|
+OBX|1011|ST|53037-8^Genetic Sequence Variation Clinical Significance^LN|2a|not specified|
+OBX|1012|ST|69548-6^Genetic Variant Assessment^LN|2a|Present|
+OBX|1013|CWE|81259-4^Probable Associated Phenotype^LN|2a|146480420^Hereditary_cancer-predisposing_syndrome^EPCAM|
+OBX|1014|CNE|53034-5^Allelic state^LN|2a|LA6706-1^Heterozygous^LN|
+
+
+
+
+######################################################
+
+83005-9	Variant Category
+Example: LA26801-3^Simple^LN
+######################################################
+
+OBX|1001|ST|83005-9^Variant Category^LN|2a|Simple|
+
+
+######################################################
+47998-0	Variant Display Name;
+Example: NM_000249.3(MLH1):c.1489dupC (p.Arg497Profs)
+######################################################
+
+ <gene>PMS2</gene>
+
+      <transcript>NM_000535.7</transcript>
+      <change>c.2324A&gt;G</change>
+
+
+      <protein>NP_000526.2</protein>
+      <change>p.N775S</change>
+
+
+NM_000535.7(PMS2):c.2324A&gt;G (p.N775S)
+NM_000535.7(PMS2):c.2324A>G (p.N775S)
+
+
+OBX|1002|ST|47998-0^Variant Display Name^LN|2a|NM_000535.7(PMS2):c.2324A>G (p.N775S)|
+
+
+
+######################################################
+48018-6	Gene Studied:
+Example: 21497^ACAD9^HGNC
+######################################################
+
+
+<gene>IDH2</gene>
+
+^IDH2^HGNC
+
+OBX|1003|CWE|48018-6^Gene Studied^LN|2a|HGNC:^IDH2^HGNC|
+
+
+
+
+
+######################################################
+51958-7	Transcript Reference Sequence: 
+Example: NM_014049.4^^RefSeq-T
+######################################################
+
+      <transcript>NM_002168.4</transcript>
+
+48004-6	DNA Change c.HGVS:  c.1249C>T
+      <change>c.782G&gt;A</change>
+      c.782G>A
+
+
+######################################################
+48006-1	Molecular Consequence: 
+Example: NM_014049.4^^RefSeq-T
+######################################################
+
+
+      <translationimpact>missense</translationimpact>
+
+
+######################################################
+81290-9	Genomic DNA Change g.HGVS:
+Example: g.128625063C>T
+######################################################
+
+<genomicchange>
+      <change>g.90630704C&gt;T</change>
+      
+       g.90630704C>T
+       
+  
+######################################################
+69547-8	Genomic Ref Allele:
+Example: C
+######################################################
+
+<reference>C</reference>
+      
+      C
+      
+###################################################### 
+69551-0	Genomic Alt Allele    
+Example: T
+###################################################### 
+
+    <alternate>T</alternate>
+
+		T
+      
+###################################################### 
+48000-4	Chromosome    
+Example: X
+###################################################### 
+
+    <chromosome>15</chromosome>
+
+		15
+
+      
+###################################################### 
+48000-4	Chromosome    
+Example: X
+###################################################### 
+
+
+      <protein>NP_002159.2</protein>
+
+###################################################### 
+81255-2	dbSNP [ID]
+Example: rs118101777
+###################################################### 
+      
+      
+      <dbsnp>rs118101777</dbsnp>
+
+ 
+
+######################################################  
+81304-8	Variant Analysis Method [Type]
+Example: LA26398-0^Sequencing^LN
+######################################################  
+
+For all variants just include below lin
+
+LA26398-0^Sequencing^LN
+
+
+
+######################################################  
+53037-8	Genetic Sequence Variation Clinical Significance
+Example: LA6668-3^Pathogenic^LN
+######################################################  
+
+    <assessment>Uncertain Significance</assessment>
+    
+    LA26333-7^Uncertain significance^LN
+
+Pathogenic			LA6668-3
+Likely pathogenic			LA26332-9
+Uncertain significance			LA26333-7
+Likely benign			LA26334-5
+Benign			LA6675-8
+
+
+######################################################  
+69548-6	Genetic Variant Assessment
+Example: LA9633-4^Present^LN
+######################################################  
+
+For all of them list below value
+
+LA9633-4^Present^LN
+
+
+######################################################  
+69548-6	Genetic Variant Assessment
+Example: LA9633-4^Present^LN
+######################################################  
+
+For all of them list below value
+
+LA9633-4^Present^LN
+
+
+
+
+
+
+
+
+
+
+change>c.2324A&gt;G</change>
