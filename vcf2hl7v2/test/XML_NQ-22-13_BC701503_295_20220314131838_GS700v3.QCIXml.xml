@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report version="1.0.0">
+  <subjectId>subject NQ-22-13_BC701503_295_20220314131838_GS700v3</subjectId>
+  <accession>NQ-22-13_BC701503_295_20220314131838_GS700v3</accession>
+  <testDate>2022-03-21</testDate>
+  <testCode>Gatorseq NGS</testCode>
+  <labTestedGenes>ABL1;AKT1;ALK;APC;AR;ARID1A;ASXL1;ATM;ATR;ATRX;BAALC;BAP1;BCL6;BCOR;BCR;BIRC3;BRAF;BRINP3;CALR;CARD11;CBFB;CBL;CCND1;CD79B;CDH1;CDK12;CDKN2A;CDKN2C;CEBPA;COL4A3;COL4A4;COL4A5;CREBBP;CRLF2;CSF1R;CSF3R;CTNNB1;DDR2;DEK;DIS3;DNMT3A;EGFR;EP300;EPCAM;ERBB2;ERBB3;ERBB4;ERG;ETNK1;ETV6;EZH2;FAM46C;FAT1;FBXW7;FGFR1;FGFR2;FGFR3;FGFR4;FLT1;FLT3;FOXA1;GLI2;GNA11;GNAQ;H3F3A;H3F3C;HIST1H1C;HIST1H3B;HIST1H3C;HIST1H3E;HIST1H3F;HIST1H3G;HIST1H3H;HIST1H3I;HIST1H3J;HOXA9;HRAS;ID3;IDH1;IDH2;JAK2;KDM6A;KDR;KIT;KLF4;KMT2A;KMT2C;KMT2D;KRAS;MAP2K1;MECOM;MEF2B;MET;MKL1;MLH1;MLLT3;MN1;MPL;MSH2;MSH6;MTOR;MYC;MYCN;MYD88;MYH11;NF1;NF2;NOTCH1;NOTCH2;NOTCH3;NOTCH4;NPM1;NRAS;NTRK1;NUP214;PALB2;PDGFRA;PDGFRB;PHF6;PIK3CA;PIK3R1;PIM1;PML;PMS2;PNRC1;POLD1;POLE;PRPF40B;PTCH1;PTEN;PTPN11;PTPRT;RAD21;RARA;RB1;RBM15;RET;ROS1;RPN1;RUNX1;RUNX1T1;SDHA;SDHB;SDHC;SDHD;SETBP1;SETD2;SF1;SF3A1;SF3B1;SMAD4;SMARCA2;SMARCA4;SMC1A;SMC3;SMO;SOX17;SRSF2;STAG2;STK11;TCF3;TERT;TET2;TLR2;TNFRSF14;TOP2A;TP53;TRAF7;TSC1;TSC2;U2AF1;U2AF2;VHL;WHSC1;WT1;ZFHX3;ZRSR2</labTestedGenes>
+  <clinicalFinding>Cancer</clinicalFinding>
+  <diagnosis>Squamous Cell Carcinoma</diagnosis>
+  <review_state>FINAL</review_state>
+  <review_state_date>2022-04-19</review_state_date>
+  <user_signout>USER</user_signout>
+  <user_signout_email>USER@email</user_signout_email>
+  <interpretation>positive</interpretation>
+  <version>QIAGEN Clinical Insight-Interpret (8.1.20220121), Ingenuity Knowledge Base (F-release), CADD (v1.6), NCBI Gene (2021-02-19), Allele Frequency Community (2019-09-25), EVS (ESP6500SI-V2), Refseq Gene Model (2021-02-19), JASPAR (2013-11), Ingenuity Knowledge Base Snapshot Timestamp (2022-03-19 18:42:28.169), Vista Enhancer hg18 (2012-07), Vista Enhancer hg19 (2012-07), Clinical Trials (F-release), MITOMAP: A Human Mitochondrial Genome Database. http://www.mitomap.org, 2019 (2020-06-19), PolyPhen-2 (v2.2.2 (HumVar)), 1000 Genome Frequency (phase3v5b), ExAC (0.3.1), iva (Mar 17 13:46 iva-1.0.136.jar), TargetScan (7.2), phyloP hg18 (NCBI36 (hg18) 2009-11, GRCh37 (hg19) 2014-02, GRCh38 2015-05), phyloP hg19 (NCBI36 (hg18) 2009-11, GRCh37 (hg19) 2014-02, GRCh38 2015-05), GENCODE (Release 37), CentoMD (5.3), dbVar (2021_04), OMIM (September 21, 2021), gnomAD (2.1.1), BSIFT (2016-02-23), TCGA (2013-09-05), Clinvar (2021-09-08), DGV (2016-05-15), COSMIC (v94), HGMD (2021.4), OncoTree (oncotree_2019_03_01), dbSNP (NCBI36 (hg18) 151, GRCh37 (hg19) 154, GRCh38 154), SIFT4G (2016-02-23)</version>
+  <variant>
+    <chromosome>X</chromosome>
+    <position>123227930</position>
+    <reference/>
+    <alternate>GTGACTATTAATAT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Squamous-cell carcinoma" type="USER" inheritance="X-linked"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>7.95</allelefraction>
+    <readDepth>88</readDepth>
+    <variation>Insertion</variation>
+    <gene>STAG2</gene>
+    <transcriptchange>
+      <transcript>NM_006603.5</transcript>
+      <change>c.3530_3531insGTGACTATTAATAT</change>
+      <exonNumber>31</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_006594.3</protein>
+      <change>p.S1178*</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.123227930_123227931insGTGACTATTAATAT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity STAG2 Description</name>
+      <type>ING</type>
+      <text>STAG2 is located at Xq25 and encodes the cohesin subunit SA-2; SA-2 is one of four core components of cohesin, a complex responsible for maintaining chromatid organization during mitosis to ensure proper chromosome segregation with each cell division [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. Germline micro duplication of the genetic region encompassing STAG2 has been reported in patients with cohesinopathy [PMID:redacted, PMID:redacted]. STAG2 deletion and inactivating mutations have been reported in several types of cancer and inactivating STAG2 alterations have been reported to cause chromosomal instability [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359703" author="system@qiagen.com" status="Reportable" timeCreated="1647889641249" timeModified="1647889641249">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 3" author="system@qiagen.com" date="1647889641251"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>X</chromosome>
+    <position>107783034</position>
+    <reference/>
+    <alternate>AATCATTAAATAT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Squamous-cell carcinoma" type="USER" inheritance="X-linked"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>5.33</allelefraction>
+    <readDepth>150</readDepth>
+    <variation>Insertion</variation>
+    <gene>COL4A5</gene>
+    <transcriptchange>
+      <transcript>NM_000495.5</transcript>
+      <change>c.140_141insAATCATTAAATAT</change>
+      <exonNumber>2</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000486.1</protein>
+      <change>p.G48fs*36</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.107783034_107783035insAATCATTAAATAT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity COL4A5 Description</name>
+      <type>ING</type>
+      <text>COL4A5 is a collagen protein involved in cell survival by regulating the MAPK pathway.</text>
+    </rcomment>
+    <variantdb id="11359781" author="system@qiagen.com" status="Reportable" timeCreated="1647889641169" timeModified="1647889641169">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 3" author="system@qiagen.com" date="1647889641172"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>X</chromosome>
+    <position>76920223</position>
+    <reference>GAA</reference>
+    <alternate/>
+    <genotype>Het</genotype>
+    <acmgRule>PM2;PM4</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER" inheritance="X-linked"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>6.32</allelefraction>
+    <readDepth>95</readDepth>
+    <variation>Deletion</variation>
+    <gene>ATRX</gene>
+    <transcriptchange>
+      <transcript>NM_138270.5</transcript>
+      <change>c.3738_3740delTTC</change>
+      <exonNumber>10</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_612114.2</protein>
+      <change>p.S1248del</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.76920223_76920225delGAA</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ATRX Description</name>
+      <type>ING</type>
+      <text>ATRX is located on the X chromosome and encodes the transcriptional regulator ATRX protein, an ATP-dependent helicase involved in gene transcription. ATRX associates with DAXX in the SWI/SNF chromatin remodeling complex; this complex appears to participate in transcriptional regulation and repression of the telomerase-independent Alternative Lengthening of Telomeres (ALT) pathway which is sometimes activated in cancer [PMID:redacted, PMID:redacted]. Loss of ATRX protein has been reported to correlate with the ALT phenotype seen in some tumor types [PMID:redacted, PMID:redacted, PMID:redacted]. However, the exact role of ATRX loss on chromatin decondensation is a matter of controversy [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358721" author="system@qiagen.com" status="Reportable" timeCreated="1647889641067" timeModified="1647889641067">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889641068"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>X</chromosome>
+    <position>76777804</position>
+    <reference/>
+    <alternate>CAT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2;PM4</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER" inheritance="X-linked"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>5.56</allelefraction>
+    <readDepth>90</readDepth>
+    <variation>Insertion</variation>
+    <gene>ATRX</gene>
+    <transcriptchange>
+      <transcript>NM_138270.5</transcript>
+      <change>c.6797_6798insATG</change>
+      <exonNumber>31</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_612114.2</protein>
+      <change>p.S2266_Q2267insC</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.76777804_76777805insCAT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ATRX Description</name>
+      <type>ING</type>
+      <text>ATRX is located on the X chromosome and encodes the transcriptional regulator ATRX protein, an ATP-dependent helicase involved in gene transcription. ATRX associates with DAXX in the SWI/SNF chromatin remodeling complex; this complex appears to participate in transcriptional regulation and repression of the telomerase-independent Alternative Lengthening of Telomeres (ALT) pathway which is sometimes activated in cancer [PMID:redacted, PMID:redacted]. Loss of ATRX protein has been reported to correlate with the ALT phenotype seen in some tumor types [PMID:redacted, PMID:redacted, PMID:redacted]. However, the exact role of ATRX loss on chromatin decondensation is a matter of controversy [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358720" author="system@qiagen.com" status="Reportable" timeCreated="1647889640977" timeModified="1647889640977">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640978"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>X</chromosome>
+    <position>66765159</position>
+    <reference>GCAGCAGCAGCAGCA</reference>
+    <alternate/>
+    <genotype>Het</genotype>
+    <acmgRule>PM1;PM2;BP6</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER" inheritance="X-linked"/>
+    <isNOOEligible>false</isNOOEligible>
+    <clinvar>RCV000534320.4; RCV000502496.1</clinvar>
+    <cadd>13.44</cadd>
+    <allelefraction>100</allelefraction>
+    <readDepth>64</readDepth>
+    <variation>Deletion</variation>
+    <gene>AR</gene>
+    <transcriptchange>
+      <transcript>NM_000044.6</transcript>
+      <change>c.225_239delGCAGCAGCAGCAGCA</change>
+      <exonNumber>1</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000035.2</protein>
+      <change>p.Q76_Q80del</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.66765159_66765173delGCAGCAGCAGCAGCA</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity AR Description</name>
+      <type>ING</type>
+      <text>AR encodes the androgen receptor, which is a nuclear receptor that binds first to testosterone, and then either directly or indirectly to DNA to transactivate androgen-sensitive target genes involved in cellular metabolism and proliferation [PMID:redacted, PMID:redacted, PMID:redacted]. Aberrant activation of the androgen receptor by amplification, mutation, differential splicing, or post-translational modification impacts the regulation of many gene and pathway targets in a context and tissue-dependent manner [PMID:redacted, PMID:redacted]. AR amplification is reported in 20-30% of castration-resistant prostate cancers during hormone deprivation therapy [PMID:redacted, PMID:redacted]. In contrast, AR amplification frequency is low (1%) in primary hormone naive cancers [PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358719" author="system@qiagen.com" status="Reportable" timeCreated="1647889640905" timeModified="1647889640905">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640906"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>16</chromosome>
+    <position>72992292</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <genotype>Het</genotype>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs140602496</dbsnp>
+    <clinvar>RCV000948983.3</clinvar>
+    <cadd>17.39</cadd>
+    <allelefraction>43</allelefraction>
+    <readDepth>212</readDepth>
+    <variation>SNV</variation>
+    <gene>ZFHX3</gene>
+    <transcriptchange>
+      <transcript>NM_006885.4</transcript>
+      <change>c.1753G&gt;A</change>
+      <exonNumber>2</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_008816.3</protein>
+      <change>p.G585S</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.72992292C&gt;T</change>
+    </genomicchange>
+    <function>normal</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ZFHX3 Description</name>
+      <type>ING</type>
+      <text>ZFHX3 encodes zinc finger homeobox protein 3, also called ATBF1 (AT motif-binding factor 1), a transcriptional regulator that modulates numerous processes including hormone signaling, calcium homeostasis, and myoblast differentiation [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. ATBF1 has been reported to play a tumor suppressor role in numerous cancers [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359780" author="system@qiagen.com" status="Reportable" timeCreated="1647889640822" timeModified="1647889640822">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640823"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>16</chromosome>
+    <position>67116236</position>
+    <reference/>
+    <alternate>AATACATGAAATACCTATTT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>7.05</allelefraction>
+    <readDepth>156</readDepth>
+    <variation>Insertion</variation>
+    <gene>CBFB</gene>
+    <transcriptchange>
+      <transcript>NM_001755.3</transcript>
+      <change>c.520_521insAATACATGAAATACCTATTT</change>
+      <exonNumber>5</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001746.1</protein>
+      <change>p.V174fs*8</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.67116236_67116237insAATACATGAAATACCTATTT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity CBFB Description</name>
+      <type>ING</type>
+      <text>CBFB encodes a member of the transcription factor complex Core binding factor, beta-subunit (CBFbeta); CBFbeta has been shown to play a role in hematopoietic development, chondrocyte differentiation, and regulation of Runx transcription factors, and CBFB is frequently altered in acute myeloid leukemia [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. Alterations in CBFB have been reported in both hematologic malignancies and in solid tumors, with one study citing mutations in CBFB as one of the three most highly mutated genes in lobular breast carcinoma [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. In leukemia, the presence of the CBFB-MYH11 fusion, also known as inv(16) and t(16;16), one of the fusion genes found in core binding factor acute myeloid leukemia (CBF-AML), has been shown to regulate the expression of a number of genes, including RUNX1, and play a role in hematopoiesis and leukemogenesis [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359779" author="system@qiagen.com" status="Reportable" timeCreated="1647889640753" timeModified="1647889640753">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640754"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>16</chromosome>
+    <position>3788643</position>
+    <reference/>
+    <alternate>GATCCTTATTGG</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2;PM4</acmgRule>
+    <assessment>Pathogenic</assessment>
+    <actionability>2C</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>6.11</allelefraction>
+    <readDepth>131</readDepth>
+    <variation>Insertion</variation>
+    <gene>CREBBP</gene>
+    <transcriptchange>
+      <transcript>NM_001079846.1</transcript>
+      <change>c.4196_4197insCCAATAAGGATC</change>
+      <exonNumber>25</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001073315.1</protein>
+      <change>p.I1399_H1400insQ*</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.3788643_3788644insGATCCTTATTGG</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity CREBBP Description</name>
+      <type>ING</type>
+      <text>CREBBP encodes the CREB binding protein, CBP, a histone acetyltransferase (HAT) that acts as a transcriptional co-activator by binding to a number of transcription factors, including c-jun, c-myb, MyoD, E2F-1, YY1, and members of the steroid hormone receptor superfamily [PMID:redacted, PMID:redacted]. CBP activates p53 signaling in response to DNA damage and may mediate beta-catenin signaling [PMID:redacted, PMID:redacted]. Alterations in the CREBBP gene have been implicated in hematological malignancies and in the predisposition to other cancers [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359778" author="system@qiagen.com" status="Reportable" timeCreated="1647889640682" timeModified="1647889640682">
+      <comments>
+        <comment text="Auto reporting variant as Pathogenic because it has tier 2C-CT" author="system@qiagen.com" date="1647889640684"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>12</chromosome>
+    <position>49443482</position>
+    <reference>G</reference>
+    <alternate>A</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs746084513</dbsnp>
+    <clinvar>RCV001316081.1; RCV000174077.1</clinvar>
+    <cadd>32.00</cadd>
+    <allelefraction>42</allelefraction>
+    <readDepth>229</readDepth>
+    <variation>SNV</variation>
+    <gene>KMT2D</gene>
+    <transcriptchange>
+      <transcript>NM_003482.4</transcript>
+      <change>c.3889C&gt;T</change>
+      <exonNumber>12</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_003473.3</protein>
+      <change>p.R1297C</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.49443482G&gt;A</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity KMT2D Description</name>
+      <type>ING</type>
+      <text>KMT2D encodes the MLL-2 protein, a member of the MLL family of histone methyltransferases; MLL-2 has been reported to regulate histone 3 lysine 4 tri-methylation (H3K4me3), which is a modification central to the regulation of transcription [PMID:redacted, PMID:redacted, PMID:redacted]. MLL2/KMT2D alterations have been reported in a variety of cancer types, and frequently in non-Hodgkin lymphoma and medulloblastoma, in which the identified MLL2/KMT2D alterations are predominantly inactivating [PMID:redacted, PMID:redacted, PMID:redacted]. MLL2/KMT2D loss of function mutations are also the most common genetic cause of the pediatric disorder known as Kabuki syndrome [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359777" author="system@qiagen.com" status="Reportable" timeCreated="1647889640593" timeModified="1647889640593">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640596"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>12</chromosome>
+    <position>22778233</position>
+    <reference>C</reference>
+    <alternate>A</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <cadd>14.81</cadd>
+    <allelefraction>16</allelefraction>
+    <readDepth>171</readDepth>
+    <variation>SNV</variation>
+    <gene>ETNK1</gene>
+    <transcriptchange>
+      <transcript>NM_018638.5</transcript>
+      <change>c.-132C&gt;A</change>
+      <exonNumber>1</exonNumber>
+      <region>5'UTR</region>
+    </transcriptchange>
+    <genomicchange>
+      <change>g.22778233C&gt;A</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ETNK1 Description</name>
+      <type>ING</type>
+      <text>ETNK1 encodes ethanolamine kinase 1, or EKI1, a protein involved in the first step of phosphatidylethanolamine (PE) synthesis [PMID:redacted, PMID:redacted]. Inactivating ETNK1 mutations have been identified in myeloproliferative disorders where they have been correlated with a low phosphoethanolamine/phosphocholine ratio [PMID:redacted, PMID:redacted]. While decreased levels of PE have been associated with cell proliferation and metastatic potential in some cancer cells and cell lines, EKI1 levels have not been analyzed in these studies [PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359776" author="system@qiagen.com" status="Reportable" timeCreated="1647889640491" timeModified="1647889640491">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640501"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>9</chromosome>
+    <position>139395147</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2;PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <cadd>27.60</cadd>
+    <allelefraction>44</allelefraction>
+    <readDepth>221</readDepth>
+    <variation>SNV</variation>
+    <gene>NOTCH1</gene>
+    <transcriptchange>
+      <transcript>NM_017617.5</transcript>
+      <change>c.5791G&gt;A</change>
+      <exonNumber>31</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_060087.3</protein>
+      <change>p.A1931T</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.139395147C&gt;T</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity NOTCH1 Description</name>
+      <type>ING</type>
+      <text>NOTCH1 encodes Notch1, a member of the Notch family of receptors, which contain an extracellular domain with several EGF-like repeats. Upon binding of membrane bound ligands, the Notch1 intracellular domain (NICD) is cleaved and forms part of a transcription factor complex regulating genes involved in cell fate determination, proliferation, and apoptosis [PMID:redacted]. Depending on cellular context, NOTCH1 can act as either a tumor suppressor or oncogene [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358718" author="system@qiagen.com" status="Reportable" timeCreated="1647889640225" timeModified="1647889640225">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640226"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>6</chromosome>
+    <position>117704558</position>
+    <reference/>
+    <alternate>CTCTATATTTATGATAAT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2;PM4</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>5.24</allelefraction>
+    <readDepth>191</readDepth>
+    <variation>Insertion</variation>
+    <gene>ROS1</gene>
+    <transcriptchange>
+      <transcript>NM_001378902.1</transcript>
+      <change>c.2402_2403insATTATCATAAATATAGAG</change>
+      <exonNumber>17</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001365831.1</protein>
+      <change>p.L801_Y802insLS*</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.117704558_117704559insCTCTATATTTATGATAAT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ROS1 Description</name>
+      <type>ING</type>
+      <text>ROS1 is a receptor tyrosine kinase of the insulin receptor family that is related to ALK [PMID:redacted, PMID:redacted]. The Ros1 protein plays a role in cellular growth and differentiation, and activates several signaling pathways, including the MAPK, PI3K, Akt, Stat3, and Vav3 signaling pathways [PMID:redacted]. ROS1 has been reported to be overexpressed and/or mutated in several cancer types, and ROS1 gene fusions, which lead to constitutive activation of Ros1, have been commonly reported in a variety of cancers, including glioblastoma, non-small cell lung cancer (NSCLC), ovarian cancer, gastric adenocarcinoma, melanoma, and colorectal cancer [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358717" author="system@qiagen.com" status="Reportable" timeCreated="1647889640118" timeModified="1647889640118">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640120"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>6</chromosome>
+    <position>26056146</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM7;PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs146932663</dbsnp>
+    <cadd>23.90</cadd>
+    <allelefraction>50</allelefraction>
+    <readDepth>307</readDepth>
+    <variation>SNV</variation>
+    <gene>H1-2</gene>
+    <transcriptchange>
+      <transcript>NM_005319.4</transcript>
+      <change>c.511G&gt;C</change>
+      <exonNumber>1</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_005310.1</protein>
+      <change>p.A171P</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.26056146C&gt;G</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity H1-2 Description</name>
+      <type>ING</type>
+      <text>H1-2, also referred to as HIST1H1C, encodes histone H1.2 or H1c, a member of the H1 family of linker histones [PMID:redacted, PMID:redacted]. H1 family members have been reported to be involved in chromatin remodeling, nucleosome spacing, and embryonic stem cell differentiation [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. H1-2 has been reported to be a transcriptional repressor involved in the regulation of genes involved in cell cycle and apoptosis, including TP53 and CCND1 [PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358716" author="system@qiagen.com" status="Reportable" timeCreated="1647889640010" timeModified="1647889640010">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889640011"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>5</chromosome>
+    <position>1295228</position>
+    <reference>G</reference>
+    <alternate>A</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS7;PS3;BP4</acmgRule>
+    <assessment>Pathogenic</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <dbsnp>rs1242535815</dbsnp>
+    <allelefraction>33</allelefraction>
+    <readDepth>138</readDepth>
+    <variation>SNV</variation>
+    <gene>TERT</gene>
+    <transcriptchange>
+      <transcript>NM_198253.3</transcript>
+      <change>c.-124C&gt;T</change>
+      <exonNumber>0</exonNumber>
+      <region>Promoter</region>
+    </transcriptchange>
+    <genomicchange>
+      <change>g.1295228G&gt;A</change>
+    </genomicchange>
+    <function>gain</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity TERT Description</name>
+      <type>ING</type>
+      <text>TERT encodes the telomerase reverse transcriptase (hTERT) protein, a component of the telomerase complex that uses an RNA template to add telomere repeats at chromosomal termini [PMID:redacted, PMID:redacted]. Loss of telomerase activity can be associated with marked shortening of telomere length and increased genomic instability, while enhanced telomerase activity can drive cellular immortalization [PMID:redacted, PMID:redacted, PMID:redacted]. Amplification and overexpression of TERT has been reported in several cancer types, and hTERT activation is understood to contribute to cancer cell immortalization [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. However, hypomorphic germline TERT mutations have been associated with the bone marrow failure syndrome dyskeratosis congenita, a cancer predisposition syndrome [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11358715" author="system@qiagen.com" status="Reportable" timeCreated="1647889639927" timeModified="1647889639927">
+      <comments>
+        <comment text="This variant has the same classification as previously reported by the user as Pathogenic for this phenotype on 10/25/2021" author="system@qiagen.com" date="1647889639930"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>4</chromosome>
+    <position>187525601</position>
+    <reference>G</reference>
+    <alternate>A</alternate>
+    <genotype>Het</genotype>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs200357548</dbsnp>
+    <clinvar>RCV000585041.4</clinvar>
+    <cadd>19.99</cadd>
+    <allelefraction>48</allelefraction>
+    <readDepth>122</readDepth>
+    <variation>SNV</variation>
+    <gene>FAT1</gene>
+    <transcriptchange>
+      <transcript>NM_005245.4</transcript>
+      <change>c.10478C&gt;T</change>
+      <exonNumber>18</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_005236.2</protein>
+      <change>p.P3493L</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.187525601G&gt;A</change>
+    </genomicchange>
+    <function>normal</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity FAT1 Description</name>
+      <type>ING</type>
+      <text>The FAT1 cadherin gene, encoding Fat1, has been implicated as a negative regulator of Wnt signaling by inhibiting beta-catenin nuclear localization and transcriptional activity [PMID:redacted, PMID:redacted]. Fat1 activity has been identified at cell-cell interfaces, at distal points of filopodial and lamellipodial structures, and in relation to cellular polarization, with these activities particularly evident during embryogenesis [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. Fat1 has been characterized in preclinical studies as a tumor suppressor that disrupts Wnt pathway signaling and reduces cell proliferation, growth, migration, and invasion [PMID:redacted, PMID:redacted, PMID:redacted]. However, Fat1 has also exhibited characteristics of an oncogene in some cancer types [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359768" author="system@qiagen.com" status="Reportable" timeCreated="1647889639762" timeModified="1647889639762">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889639764"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>4</chromosome>
+    <position>153332584</position>
+    <reference/>
+    <alternate>ACAACAAAAGTGAGTATAT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>2C</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>6.91</allelefraction>
+    <readDepth>246</readDepth>
+    <variation>Insertion</variation>
+    <gene>FBXW7</gene>
+    <transcriptchange>
+      <transcript>NM_033632.3</transcript>
+      <change>c.371_372insATATACTCACTTTTGTTGT</change>
+      <exonNumber>2</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_361014.1</protein>
+      <change>p.D124fs*9</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.153332584_153332585insACAACAAAAGTGAGTATAT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity FBXW7 Description</name>
+      <type>ING</type>
+      <text>FBXW7 encodes the F-box protein subunit of the SCF ubiquitin ligase complex, which is responsible for recruitment of substrates for targeted degradation by the proteasome [PMID:redacted]. Fbxw7 targets include several known proto-oncogenes, including Cyclin E1, Notch1, Myc, Aurora-A, and Jun [PMID:redacted, PMID:redacted, PMID:redacted]. FBXW7 inactivating mutations have been reported in a large variety of tumors and, combined with the oncogenic potential of several FBXW7 substrates, leads to the conclusion that FBXW7 is a general tumor suppressor [PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359775" author="system@qiagen.com" status="Reportable" timeCreated="1647889639689" timeModified="1647889639689">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 2C-CT" author="system@qiagen.com" date="1647889639691"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>3</chromosome>
+    <position>168818742</position>
+    <reference>CC</reference>
+    <alternate/>
+    <genotype>Het</genotype>
+    <acmgRule>PM2</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>5.15</allelefraction>
+    <readDepth>194</readDepth>
+    <variation>Deletion</variation>
+    <gene>MECOM</gene>
+    <transcriptchange>
+      <transcript>NM_005241.4</transcript>
+      <change>c.2215_2216delGG</change>
+      <exonNumber>11</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_005232.2</protein>
+      <change>p.G739fs*28</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.168818742_168818743delCC</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity MECOM Description</name>
+      <type>ING</type>
+      <text>MECOM encodes EVI-1, which is also known as MDS1 and EVI1 complex locus protein EVI1; EVI-1 is an alternatively-spliced nuclear zinc-finger protein which directly, through DNA-binding and transcriptional activation, and indirectly, through polycomb-group protein recruitment, regulates a number of genes with roles in cellular signaling, apoptosis, and differentiation [PMID:redacted, PMID:redacted, PMID:redacted]. MECOM has been primarily reported to be the target of a number of rearrangements in a subset of myeloid malignancies where it blocks differentiation and abrogates the apoptotic program [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. In addition, overexpression of MECOM mRNA or EVI-1 protein has been reported in some solid tumor specimens [PMID:redacted, PMID:redacted, PMID:redacted]. EVI-1 expression has been associated with upregulation of the PI3K/Akt/mTOR pathway [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359767" author="system@qiagen.com" status="Reportable" timeCreated="1647889639603" timeModified="1647889639603">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889639604"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>3</chromosome>
+    <position>142269071</position>
+    <reference/>
+    <alternate>TTACT</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>2C</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>5.34</allelefraction>
+    <readDepth>131</readDepth>
+    <variation>Insertion</variation>
+    <gene>ATR</gene>
+    <transcriptchange>
+      <transcript>NM_001184.4</transcript>
+      <change>c.2878_2879insAGTAA</change>
+      <exonNumber>14</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001175.2</protein>
+      <change>p.R960fs*2</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.142269071_142269072insTTACT</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ATR Description</name>
+      <type>ING</type>
+      <text>ATR encodes the protein ataxia telangiectasia and Rad3 related, which belongs to the PI3K/PI4K family, and is closely related to ATM. Atr protein is considered to be a master regulator and sensor of DNA damage, and is necessary for regulating the cell-cycle, DNA replication and DNA repair [PMID:redacted, PMID:redacted]. Atr phosphorylates the tumor suppressor Brca1, and several cell cycle checkpoint proteins including Chk1; and plays a key role in maintaining genome integrity. Germline ATR mutation results in Seckel syndrome dwarfism, and more rarely, an oropharyngeal cancer syndrome [PMID:redacted]. Early in the progression of cancer, the Atr/Atm-regulated DNA damage response network is proposed to be activated to prevent genomic instability and malignant conversion [PMID:redacted]. Atr inactivation, either by mutation or decreased expression, is associated with increased microsatellite instability (MSI) and chromosome instability (CIN) in a variety of tumor types, including colorectal and endometrial cancers [PMID:redacted, PMID:redacted, PMID:redacted]. In addition, activation of Atr has been reported in some tumor types, perhaps as compensation for lack of Atm [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359766" author="system@qiagen.com" status="Reportable" timeCreated="1647889639476" timeModified="1647889639476">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 2C-CT" author="system@qiagen.com" date="1647889639478"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>3</chromosome>
+    <position>37070368</position>
+    <reference/>
+    <alternate>ATTATTCTTGTTTTTA</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>2C</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>5.81</allelefraction>
+    <readDepth>172</readDepth>
+    <variation>Insertion</variation>
+    <gene>MLH1</gene>
+    <transcriptchange>
+      <transcript>NM_000249.4</transcript>
+      <change>c.1504_1505insTTATTCTTGTTTTTAA</change>
+      <exonNumber>13</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000240.1</protein>
+      <change>p.N502fs*9</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.37070368_37070369insATTATTCTTGTTTTTA</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity MLH1 Description</name>
+      <type>ING</type>
+      <text>MLH1 encodes the protein MutL homolog 1, colon cancer, nonpolyposis type 2 (Mlh1), which binds Pms2 to form MutLalpha, a complex involved in DNA mismatch repair (MMR) and genome maintenance [PMID:redacted]. Germline mutations of MMR proteins such as Mlh1, Msh2, Msh6, or Pms2 predispose patients to microsatellite instability (MSI), along with nonpolyposis colon cancer, gastric cancer, and small bowel cancer [PMID:redacted]. Germline MLH1 mutations are associated with Lynch syndrome, which is characterized by increased risk of a number of cancers, especially colorectal carcinoma and endometrial carcinoma [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. In addition to germline mutations of MLH1, the gene can be inactivated by hypermethylation of the promoter, which leads to loss of Mlh1 protein expression. These tumors are referred to as the CpG island methylator phenotype (CIMP) and are associated with the majority of sporadic microsatellite instability colon cancer [PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359702" author="system@qiagen.com" status="Reportable" timeCreated="1647889639378" timeModified="1647889639378">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 2C-CT" author="system@qiagen.com" date="1647889639381"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>2</chromosome>
+    <position>227984616</position>
+    <reference/>
+    <alternate>ATATACATAAAATATATATTTATAGAAACCACAATATATATATTATATATA</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2;PM4</acmgRule>
+    <assessment>Pathogenic</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Pathogenic" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <allelefraction>5.69</allelefraction>
+    <readDepth>246</readDepth>
+    <variation>Insertion</variation>
+    <gene>COL4A4</gene>
+    <transcriptchange>
+      <transcript>NM_000092.5</transcript>
+      <change>c.366_367insTATATATAATATATATATTGTGGTTTCTATAAATATATATTTTATGTATAT</change>
+      <exonNumber>6</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000083.3</protein>
+      <change>p.G122_I123insYI*</change>
+      <translationimpact>in-frame</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.227984616_227984617insATATACATAAAATATATATTTATAGAAACCACAATATATATATTATATATA</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity COL4A4 Description</name>
+      <type>ING</type>
+      <text>COL4A4 is a collagen protein involved in cell survival by regulating the MAPK pathway.</text>
+    </rcomment>
+    <variantdb id="11359701" author="system@qiagen.com" status="Reportable" timeCreated="1647889639217" timeModified="1647889639217">
+      <comments>
+        <comment text="Auto reporting variant as Pathogenic because it has tier 3" author="system@qiagen.com" date="1647889639236"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>2</chromosome>
+    <position>29940528</position>
+    <reference/>
+    <alternate>TGGC</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM2</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <allelefraction>5.31</allelefraction>
+    <readDepth>113</readDepth>
+    <variation>Insertion</variation>
+    <gene>ALK</gene>
+    <transcriptchange>
+      <transcript>NM_004304.5</transcript>
+      <change>c.702_703insGCCA</change>
+      <exonNumber>2</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_004295.2</protein>
+      <change>p.S235fs*6</change>
+      <translationimpact>frameshift</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.29940528_29940529insTGGC</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity ALK Description</name>
+      <type>ING</type>
+      <text>ALK encodes Anaplastic lymphoma kinase (Alk), a receptor tyrosine kinase that is part of the insulin receptor superfamily and induces downstream activation of pathways associated with cell survival, angiogenesis, and proliferation [PMID:redacted]. ALK was originally identified in anaplastic lymphoma as a fusion partner with the gene product of NPM1; ALK has subsequently been identified as a fusion partner with numerous other genes, including EML4 in lung cancer [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. The ALK gene can become oncogenic by a gene rearrangement, copy number gain, or genetic mutation [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359774" author="system@qiagen.com" status="Reportable" timeCreated="1647889638898" timeModified="1647889638898">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889638917"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>1</chromosome>
+    <position>226259113</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:490w5" name="Squamous-cell carcinoma">Squamous-cell carcinoma</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Squamous-cell carcinoma" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs749423281</dbsnp>
+    <cadd>24.80</cadd>
+    <allelefraction>5.70</allelefraction>
+    <readDepth>158</readDepth>
+    <variation>SNV</variation>
+    <gene>H3-3A</gene>
+    <transcriptchange>
+      <transcript>NM_002107.7</transcript>
+      <change>c.344C&gt;G</change>
+      <exonNumber>4</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_002098.1</protein>
+      <change>p.A115G</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.226259113C&gt;G</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity H3-3A Description</name>
+      <type>ING</type>
+      <text>H3-3A and H3-3B both encode the replacement variant histone H3.3, which is associated with replication-independent deposition machinery and the promoter regions of transcriptionally active genes; variant histone H3.3 is the most common form of histone H3 in differentiated cells [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. Via interaction with ATRX protein and Daxx, histone variant H3.3 has also been reported to impact alternative lengthening of telomeres (ALT) processes, with phosphorylated H3.3 having been associated with preservation of chromatin integrity and cell survival [PMID:redacted, PMID:redacted]. H3-3A and H3-3B have been reported to harbor differing transcriptional promoter elements, and exhibit different patterns of mutation in varying cancer tissues [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. H3-3A and H3-3B mutational status can differentiate giant cell tumor in bone (GCTB) from chondrosarcoma, with H3-3A exhibiting significantly more frequent mutation in GCTB, and H3-3B exhibiting significantly more frequent mutation in chondrosarcoma [PMID:redacted, PMID:redacted, PMID:redacted]. H3-3A mutations, in particular the canonical K27M mutation, and histone variant H3.3 alterations have been associated with ALT, reduced expression of the transcriptionally repressive H3K27me3 marker, and increased intragenic copy number alterations in cancer cell lines or CNS tumor tissues [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. A second canonical alteration, H3-3A G35R, also reported as G34R, has been associated with N-Myc activation and altered distribution of the activating histone H3K36me3 modification across the genome in glioblastoma cells [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="11359773" author="system@qiagen.com" status="Reportable" timeCreated="1647889638702" timeModified="1647889638702">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1647889638720"/>
+      </comments>
+    </variantdb>
+  </variant>
+</report>

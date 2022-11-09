@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report version="1.0.0">
+  <subjectId>Test subject</subjectId>
+  <accession>Test subject</accession>
+  <testDate>2021-08-20</testDate>
+  <testCode>Gatorseq NGS</testCode>
+  <labTestedGenes>ABL1;AKT1;ALK;APC;AR;ARID1A;ASXL1;ATM;ATR;ATRX;BAALC;BAP1;BCL6;BCOR;BCR;BIRC3;BRAF;BRINP3;CALR;CARD11;CBFB;CBL;CCND1;CD79B;CDH1;CDK12;CDKN2A;CDKN2C;CEBPA;COL4A3;COL4A4;COL4A5;CREBBP;CRLF2;CSF1R;CSF3R;CTNNB1;DDR2;DEK;DIS3;DNMT3A;EGFR;EP300;EPCAM;ERBB2;ERBB3;ERBB4;ERG;ETNK1;ETV6;EZH2;FAM46C;FAT1;FBXW7;FGFR1;FGFR2;FGFR3;FGFR4;FLT1;FLT3;FOXA1;GLI2;GNA11;GNAQ;H3F3A;H3F3C;HIST1H1C;HIST1H3B;HIST1H3C;HIST1H3E;HIST1H3F;HIST1H3G;HIST1H3H;HIST1H3I;HIST1H3J;HOXA9;HRAS;ID3;IDH1;IDH2;JAK2;KDM6A;KDR;KIT;KLF4;KMT2A;KMT2C;KMT2D;KRAS;MAP2K1;MECOM;MEF2B;MET;MKL1;MLH1;MLLT3;MN1;MPL;MSH2;MSH6;MTOR;MYC;MYCN;MYD88;MYH11;NF1;NF2;NOTCH1;NOTCH2;NOTCH3;NOTCH4;NPM1;NRAS;NTRK1;NUP214;PALB2;PDGFRA;PDGFRB;PHF6;PIK3CA;PIK3R1;PIM1;PML;PMS2;PNRC1;POLD1;POLE;PRPF40B;PTCH1;PTEN;PTPN11;PTPRT;RAD21;RARA;RB1;RBM15;RET;ROS1;RPN1;RUNX1;RUNX1T1;SDHA;SDHB;SDHC;SDHD;SETBP1;SETD2;SF1;SF3A1;SF3B1;SMAD4;SMARCA2;SMARCA4;SMC1A;SMC3;SMO;SOX17;SRSF2;STAG2;STK11;TCF3;TERT;TET2;TLR2;TNFRSF14;TOP2A;TP53;TRAF7;TSC1;TSC2;U2AF1;U2AF2;VHL;WHSC1;WT1;ZFHX3;ZRSR2</labTestedGenes>
+  <clinicalFinding>Cancer</clinicalFinding>
+  <diagnosis>Chronic Myelomonocytic Leukemia</diagnosis>
+  <review_state>FINAL</review_state>
+  <review_state_date>2021-08-22</review_state_date>
+  <user_signout>Firstname Lastname</user_signout>
+  <user_signout_email>xyz@bbbb.edu</user_signout_email>
+  <interpretation>presumed_positive</interpretation>
+  <version>QIAGEN Clinical Insight-Interpret (7.1.20210428), Ingenuity Knowledge Base (B-release), CADD (v1.6), Allele Frequency Community (2019-09-25), EVS (ESP6500SI-V2), Refseq Gene Model (2020-04-06), JASPAR (2013-11), Ingenuity Knowledge Base Snapshot Timestamp (2021-06-19 12:58:52.76), Vista Enhancer hg18 (2012-07), Vista Enhancer hg19 (2012-07), Clinical Trials (B-release), MITOMAP: A Human Mitochondrial Genome Database. http://www.mitomap.org, 2019 (2020-06-19), PolyPhen-2 (v2.2.2), 1000 Genome Frequency (phase3v5b), ExAC (0.3.1), iva (Apr 29 10:37 ), TargetScan (7.2), phyloP hg18 (NCBI36 (hg18) 2009-11, GRCh37 (hg19) 2014-02, GRCh38 2015-05), phyloP hg19 (NCBI36 (hg18) 2009-11, GRCh37 (hg19) 2014-02, GRCh38 2015-05), GENCODE (Release 33), CentoMD (5.3), OMIM (July 06, 2020), gnomAD (2.1.1), BSIFT (2016-02-23), TCGA (2013-09-05), Clinvar (2020-09-15), DGV (2016-05-15), COSMIC (v92), HGMD (2021.2), OncoTree (oncotree_2019_03_01), dbSNP (NCBI36 (hg18) 151, GRCh37 (hg19) 153, GRCh38 153), SIFT4G (2016-02-23)</version>
+  
+  
+  <variant>
+    <chromosome>15</chromosome>
+    <position>90630704</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PP3;BP6</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs118101777</dbsnp>
+    <hgmd>CM166195 (DP)</hgmd>
+    <clinvar>RCV000887014.2; RCV000193667.1</clinvar>
+    <cadd>26.70</cadd>
+    <allelefraction>47</allelefraction>
+    <readDepth>1211</readDepth>
+    <variation>SNV</variation>
+    <gene>IDH2</gene>
+    <transcriptchange>
+      <transcript>NM_002168.4</transcript>
+      <change>c.782G&gt;A</change>
+      <exonNumber>6</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_002159.2</protein>
+      <change>p.R261H</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.90630704C&gt;T</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity IDH2 Description</name>
+      <type>ING</type>
+      <text>The isocitrate dehydrogenases IDH1 and IDH2 encode highly homologous enzymes that are involved in the citric acid (TCA) cycle and other metabolic processes, playing roles in normal cellular metabolism and in protection against oxidative stress and apoptosis. Idh1 is localized to the cytoplasm and peroxisome and Idh2 is localized to the mitochondria [PMID:redacted]. Mutations in these enzymes result in downstream effects that are associated with tumorigenesis [PMID:redacted]. IDH2 alterations, most notably at codons R140 and R172, alter the normal catalytic activity of the enzyme to promote the conversion of 2-ketoglutarate to d-2-hydroxyglutarate, a potential oncometabolite [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. IDH mutations also result in oxidative cellular conditions and increased methylation, suggesting that these could be early stage events in specific cancers [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326768" author="system@qiagen.com" status="Reportable" timeCreated="1629644600935" timeModified="1629644600935">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1629644600936"/>
+      </comments>
+    </variantdb>
+  </variant>
+  
+  
+  
+  
+  <variant>
+    <chromosome>7</chromosome>
+    <position>6017340</position>
+    <reference>T</reference>
+    <alternate>C</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PS4;PM1;PP3;BS3;BP6</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs17420802</dbsnp>
+    <hgmd>CM179080 (DM?)</hgmd>
+    <clinvar>RCV000755648.1; RCV000144644.1; RCV000079108.13; RCV000615735.2; RCV000755368.4; RCV000130364.2; RCV000030368.5</clinvar>
+    <cadd>23.10</cadd>
+    <allelefraction>19</allelefraction>
+    <readDepth>890</readDepth>
+    <variation>SNV</variation>
+    <gene>PMS2</gene>
+    <transcriptchange>
+      <transcript>NM_000535.7</transcript>
+      <change>c.2324A&gt;G</change>
+      <exonNumber>14</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000526.2</protein>
+      <change>p.N775S</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.6017340T&gt;C</change>
+    </genomicchange>
+    <function>normal</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity PMS2 Description</name>
+      <type>ING</type>
+      <text>PMS2 encodes a member of the mismatch repair (MMR) gene family. MMR proteins are responsible for correcting DNA errors introduced either during replication, or as a result of DNA damage or chemical modification [PMID:redacted, PMID:redacted]. Specifically, Pms2 and Mlh1 heterodimerize to form the MutL-alpha complex, which has an essential role as an ATPase that supports the functions of the MutS complex in DNA mismatch repair [PMID:redacted, PMID:redacted]. MMR proteins, including the MutL-alpha complex, have also been implicated in the meiotic and mitotic cell cycle [PMID:redacted]. Germline mutations in PMS2 contribute to development of Hereditary Non-Polyposis Colorectal Cancer (HNPCC; Lynch syndrome), although PMS2 mutations have been shown to have a smaller role than MLH1/MSH2 alterations; PMS2 alterations have been reported to account for 6% of Lynch syndrome cases, as compared with 40-50% cited for MLH1/MSH2 alterations [PMID:redacted, PMID:redacted, PMID:redacted]. Carriers of germline PMS2 mutations have an increased risk of various cancers, including a reported cumulative risk of developing cancer by age 70 of 15-20% for colorectal cancer, 15% for endometrial cancer, and 25-32% for any Lynch syndrome-associated cancer [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326755" author="system@qiagen.com" status="Reportable" timeCreated="1629644600791" timeModified="1629644600791">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1629644600792"/>
+      </comments>
+    </variantdb>
+  </variant>
+  
+  
+  
+  
+  
+  
+  <variant>
+    <chromosome>4</chromosome>
+    <position>187532810</position>
+    <reference>A</reference>
+    <alternate>T</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs146471129</dbsnp>
+    <cadd>27.10</cadd>
+    <allelefraction>46</allelefraction>
+    <readDepth>1574</readDepth>
+    <variation>SNV</variation>
+    <gene>FAT1</gene>
+    <transcriptchange>
+      <transcript>NM_005245.4</transcript>
+      <change>c.9583T&gt;A</change>
+      <exonNumber>14</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_005236.2</protein>
+      <change>p.Y3195N</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.187532810A&gt;T</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity FAT1 Description</name>
+      <type>ING</type>
+      <text>The FAT1 cadherin gene, encoding Fat1, has been implicated as a negative regulator of Wnt signaling by inhibiting beta-catenin nuclear localization and transcriptional activity [PMID:redacted, PMID:redacted]. Fat1 activity has been identified at cell-cell interfaces, at distal points of filopodial and lamellipodial structures, and in relation to cellular polarization, with these activities particularly evident during embryogenesis [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted]. Fat1 has been characterized in preclinical studies as a tumor suppressor that disrupts Wnt pathway signaling and reduces cell proliferation, growth, migration, and invasion [PMID:redacted, PMID:redacted, PMID:redacted]. However, Fat1 has also exhibited characteristics of an oncogene in some cancer types [PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326767" author="system@qiagen.com" status="Reportable" timeCreated="1629644600576" timeModified="1629644600576">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1629644600577"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>4</chromosome>
+    <position>106196521</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>1A</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <cosmic>96926</cosmic>
+    <cadd>37.00</cadd>
+    <allelefraction>44</allelefraction>
+    <readDepth>699</readDepth>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.4854C&gt;G</change>
+      <exonNumber>11</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Y1618*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106196521C&gt;G</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity TET2 Description</name>
+      <type>ING</type>
+      <text>The TET2 gene encodes Tet2, a methylcytosine dioxygenase that converts methylcytosine (5mC) to 5-hydroxymethylcytosine (5hmC), a crucial component in the DNA methylation process [PMID:redacted, PMID:redacted]. It is a tumor suppressor gene that is widely expressed in hematopoietic cells and plays a role in the progression of myeloid neoplasms [PMID:redacted]. Tet2 deficiency, through inactivating mutation or reduced expression, has been correlated with decreased levels of 5-hydroxymethylcytosine (5hmC) and altered DNA methylation patterns in cancer samples [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326153" author="system@qiagen.com" status="Reportable" timeCreated="1629644600471" timeModified="1629644600471">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 1A-S2" author="system@qiagen.com" date="1629644600472"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>4</chromosome>
+    <position>106157335</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PVS1;PM2</acmgRule>
+    <assessment>Likely Pathogenic</assessment>
+    <actionability>1A</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Likely Pathogenic" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>true</isNOOEligible>
+    <dbsnp>rs777797154</dbsnp>
+    <cosmic>87099</cosmic>
+    <cadd>37.00</cadd>
+    <allelefraction>38</allelefraction>
+    <readDepth>754</readDepth>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.2236C&gt;T</change>
+      <exonNumber>3</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Q746*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106157335C&gt;T</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity TET2 Description</name>
+      <type>ING</type>
+      <text>The TET2 gene encodes Tet2, a methylcytosine dioxygenase that converts methylcytosine (5mC) to 5-hydroxymethylcytosine (5hmC), a crucial component in the DNA methylation process [PMID:redacted, PMID:redacted]. It is a tumor suppressor gene that is widely expressed in hematopoietic cells and plays a role in the progression of myeloid neoplasms [PMID:redacted]. Tet2 deficiency, through inactivating mutation or reduced expression, has been correlated with decreased levels of 5-hydroxymethylcytosine (5hmC) and altered DNA methylation patterns in cancer samples [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326753" author="system@qiagen.com" status="Reportable" timeCreated="1629644600418" timeModified="1629644600418">
+      <comments>
+        <comment text="Auto reporting variant as Likely Pathogenic because it has tier 1A-S2" author="system@qiagen.com" date="1629644600420"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <variant>
+    <chromosome>2</chromosome>
+    <position>47635588</position>
+    <reference>C</reference>
+    <alternate>A</alternate>
+    <genotype>Het</genotype>
+    <acmgRule>PM1;PP3</acmgRule>
+    <assessment>Uncertain Significance</assessment>
+    <actionability>3</actionability>
+    <phenotype id="ING:48l3f" name="Chronic myelomonocytic leukemia">Chronic myelomonocytic leukemia</phenotype>
+    <panelView>DEFAULT</panelView>
+    <classification value="Uncertain Significance" phenotype="Chronic myelomonocytic leukemia" type="USER"/>
+    <isNOOEligible>false</isNOOEligible>
+    <dbsnp>rs587781447</dbsnp>
+    <cosmic>7349852</cosmic>
+    <clinvar>RCV000235359.3; RCV000216857.3</clinvar>
+    <cadd>24.10</cadd>
+    <allelefraction>47</allelefraction>
+    <readDepth>766</readDepth>
+    <variation>SNV</variation>
+    <gene>MSH2</gene>
+    <transcriptchange>
+      <transcript>NM_000251.3</transcript>
+      <change>c.260C&gt;A</change>
+      <exonNumber>2</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_000242.1</protein>
+      <change>p.S87Y</change>
+      <translationimpact>missense</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.47635588C&gt;A</change>
+    </genomicchange>
+    <function>loss</function>
+    <referencecount>0</referencecount>
+    <rcomment>
+      <name>Ingenuity MSH2 Description</name>
+      <type>ING</type>
+      <text>MSH2 encodes MutS protein homolog 2 (Msh2), a member of the mismatch repair (MMR) gene family [PMID:redacted, PMID:redacted]. As a component of the heterodimeric MutSalpha complex with Msh6, and the MutSbeta complex with Msh3, Msh2 mediates MutSalpha and MutSbeta binding to, and repair of, DNA mismatches [PMID:redacted, PMID:redacted]. Defective mismatch repair occurring as a result of mutation(s) in the MMR family (MLH1, MSH2, MSH6, or PMS2) can result in microsatellite instability (MSI), common in colon, endometrium and stomach cancers [PMID:redacted]. Germline mutations in MSH2 are associated with Hereditary Non-Polyposis Colorectal Cancer (HNPCC; Lynch syndrome), which is characterized by an increased risk of a number of cancers, especially colorectal carcinoma and endometrial carcinoma [PMID:redacted, PMID:redacted, PMID:redacted, PMID:redacted].</text>
+    </rcomment>
+    <variantdb id="9326152" author="system@qiagen.com" status="Reportable" timeCreated="1629644600278" timeModified="1629644600278">
+      <comments>
+        <comment text="Auto reporting variant as Uncertain Significance because it has tier 3" author="system@qiagen.com" date="1629644600282"/>
+      </comments>
+    </variantdb>
+  </variant>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106196521</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.4854C&gt;G</change>
+      <exonNumber>11</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Y1618*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106196521C&gt;G</change>
+    </genomicchange>
+    <drug>
+      <drugname>decitabine</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:hqu3w</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:489g3</diseaseid>
+      <diseasename>Myelodysplastic syndrome</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>candidate</type>
+    <rcomment>
+      <type>ING</type>
+      <text>Decitabine, a nucleoside metabolic inhibitor, is FDA-approved for treating patients with myelodysplastic syndromes (MDS) including previously treated and untreated, de novo and secondary MDS of all French-American-British subtypes (refractory anemia, refractory anemia with ringed sideroblasts, refractory anemia with excess blasts, refractory anemia with excess blasts in transformation, and chronic myelomonocytic leukemia) and intermediate-1, intermediate -2, and high-risk International Prognostic Scoring System groups; and EMA-approved for treating patients with newly diagnosed de novo or secondary acute myeloid leukaemia (AML) who are not candidates for standard induction chemotherapy.</text>
+    </rcomment>
+    <treatmentdb id="4697627" state="1" author="system@qiagen.com" timeCreated="1629644600476" timeModified="1629644600476"/>
+  </treatment>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106196521</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.4854C&gt;G</change>
+      <exonNumber>11</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Y1618*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106196521C&gt;G</change>
+    </genomicchange>
+    <drug>
+      <drugname>5-azacytidine</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:hqu3x</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:489g3</diseaseid>
+      <diseasename>Myelodysplastic syndrome</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>candidate</type>
+    <rcomment>
+      <type>ING</type>
+      <text>Azacitidine, a nucleoside metabolic inhibitor, is FDA-approved for treating patients with the following French-American-British (FAB) myelodysplastic syndrome (MDS) subtypes: refractory anemia (RA) or refractory anemia with ringed sideroblasts (RARS) (if accompanied by neutropenia or thrombocytopenia or requiring transfusions), refractory anemia with excess blasts (RAEB), refractory anemia with excess blasts in transformation (RAEB-T), and chronic myelomonocytic leukemia (CMMoL); and for continued treatment of adult patients with acute myeloid leukemia who achieved first complete remission (CR) or complete remission with incomplete blood count recovery (CRi) following intensive induction chemotherapy and are not able to complete intensive curative therapy; azacitidine is EMA-approved for treating adult patients who are not eligible for haematopoietic stem cell transplantation (HSCT) with: intermediate-2 and high-risk myelodysplastic syndromes (MDS) according to the International Prognostic Scoring System (IPSS), chronic myelomonocytic leukaemia (CMML) with 10-29 % marrow blasts without myeloproliferative disorder, acute myeloid leukaemia (AML) with 20-30 % blasts and multi-lineage dysplasia, according to World Health Organisation (WHO) classification, and AML with &gt;30% marrow blasts according to the WHO classification.</text>
+    </rcomment>
+    <treatmentdb id="4697626" state="1" author="system@qiagen.com" timeCreated="1629644600476" timeModified="1629644600476"/>
+  </treatment>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106196521</position>
+    <reference>C</reference>
+    <alternate>G</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.4854C&gt;G</change>
+      <exonNumber>11</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Y1618*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106196521C&gt;G</change>
+    </genomicchange>
+    <drug>
+      <drugname>PEG-interferon alfa-2a</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:pkfl8</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:em03x</diseaseid>
+      <diseasename>Chronic myeloproliferative neoplasm</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>caution</type>
+    <treatmentdb id="4697625" state="1" author="system@qiagen.com" timeCreated="1629644600475" timeModified="1629644600475"/>
+  </treatment>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106157335</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.2236C&gt;T</change>
+      <exonNumber>3</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Q746*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106157335C&gt;T</change>
+    </genomicchange>
+    <drug>
+      <drugname>decitabine</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:hqu3w</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:489g3</diseaseid>
+      <diseasename>Myelodysplastic syndrome</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>candidate</type>
+    <rcomment>
+      <type>ING</type>
+      <text>Decitabine, a nucleoside metabolic inhibitor, is FDA-approved for treating patients with myelodysplastic syndromes (MDS) including previously treated and untreated, de novo and secondary MDS of all French-American-British subtypes (refractory anemia, refractory anemia with ringed sideroblasts, refractory anemia with excess blasts, refractory anemia with excess blasts in transformation, and chronic myelomonocytic leukemia) and intermediate-1, intermediate -2, and high-risk International Prognostic Scoring System groups; and EMA-approved for treating patients with newly diagnosed de novo or secondary acute myeloid leukaemia (AML) who are not candidates for standard induction chemotherapy.</text>
+    </rcomment>
+    <treatmentdb id="4697590" state="1" author="system@qiagen.com" timeCreated="1629644600424" timeModified="1629644600424"/>
+  </treatment>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106157335</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.2236C&gt;T</change>
+      <exonNumber>3</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Q746*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106157335C&gt;T</change>
+    </genomicchange>
+    <drug>
+      <drugname>5-azacytidine</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:hqu3x</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:489g3</diseaseid>
+      <diseasename>Myelodysplastic syndrome</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>candidate</type>
+    <rcomment>
+      <type>ING</type>
+      <text>Azacitidine, a nucleoside metabolic inhibitor, is FDA-approved for treating patients with the following French-American-British (FAB) myelodysplastic syndrome (MDS) subtypes: refractory anemia (RA) or refractory anemia with ringed sideroblasts (RARS) (if accompanied by neutropenia or thrombocytopenia or requiring transfusions), refractory anemia with excess blasts (RAEB), refractory anemia with excess blasts in transformation (RAEB-T), and chronic myelomonocytic leukemia (CMMoL); and for continued treatment of adult patients with acute myeloid leukemia who achieved first complete remission (CR) or complete remission with incomplete blood count recovery (CRi) following intensive induction chemotherapy and are not able to complete intensive curative therapy; azacitidine is EMA-approved for treating adult patients who are not eligible for haematopoietic stem cell transplantation (HSCT) with: intermediate-2 and high-risk myelodysplastic syndromes (MDS) according to the International Prognostic Scoring System (IPSS), chronic myelomonocytic leukaemia (CMML) with 10-29 % marrow blasts without myeloproliferative disorder, acute myeloid leukaemia (AML) with 20-30 % blasts and multi-lineage dysplasia, according to World Health Organisation (WHO) classification, and AML with &gt;30% marrow blasts according to the WHO classification.</text>
+    </rcomment>
+    <treatmentdb id="4697589" state="1" author="system@qiagen.com" timeCreated="1629644600423" timeModified="1629644600423"/>
+  </treatment>
+  <treatment>
+    <chromosome>4</chromosome>
+    <position>106157335</position>
+    <reference>C</reference>
+    <alternate>T</alternate>
+    <variation>SNV</variation>
+    <gene>TET2</gene>
+    <transcriptchange>
+      <transcript>NM_001127208.2</transcript>
+      <change>c.2236C&gt;T</change>
+      <exonNumber>3</exonNumber>
+      <region>Exon</region>
+    </transcriptchange>
+    <proteinchange>
+      <protein>NP_001120680.1</protein>
+      <change>p.Q746*</change>
+      <translationimpact>stop gain</translationimpact>
+    </proteinchange>
+    <genomicchange>
+      <change>g.106157335C&gt;T</change>
+    </genomicchange>
+    <drug>
+      <drugname>PEG-interferon alfa-2a</drugname>
+    </drug>
+    <finding>
+      <findingid>ING:pkfl8</findingid>
+      <findingsource>NCCN</findingsource>
+      <diseaseid>ING:em03x</diseaseid>
+      <diseasename>Chronic myeloproliferative neoplasm</diseasename>
+      <cgmarker/>
+    </finding>
+    <diagnosismatch>true</diagnosismatch>
+    <tissuematch>true</tissuematch>
+    <type>caution</type>
+    <treatmentdb id="4697588" state="1" author="system@qiagen.com" timeCreated="1629644600423" timeModified="1629644600423"/>
+  </treatment>
+</report>
